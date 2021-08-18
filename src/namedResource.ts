@@ -1,4 +1,4 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
 export interface NamedResource<TLinks = {}> extends ResourceWithId<TLinks> {
   Name: string;

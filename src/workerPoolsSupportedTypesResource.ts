@@ -5,11 +5,11 @@ export interface WorkerPoolsSupportedTypes {
 }
 
 export interface DynamicWorkerType {
-  DeprecationDateUtc?: Date;
-  Description: string;
-  EndOfLifeDateUtc?: Date;
-  StartDateUtc?: Date;
   Type: string;
+  Description: string;
+  StartDateUtc?: Date;
+  DeprecationDateUtc?: Date;
+  EndOfLifeDateUtc?: Date;
 }
 
 export interface DynamicWorkerTypes {

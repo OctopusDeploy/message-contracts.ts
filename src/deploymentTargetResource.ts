@@ -1,6 +1,5 @@
-import type { MachineResource } from "./machineResource";
+import type { MachineResource, NewMachineResource } from "./machineResource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
-import type { NewMachineResource } from "./machineResource";
 
 export interface DeploymentTargetResource extends MachineResource {
   EnvironmentIds: string[]; //ReferenceCollection;

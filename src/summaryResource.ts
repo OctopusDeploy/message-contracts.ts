@@ -1,6 +1,6 @@
 import type { CommunicationStyle } from "./communicationStyle";
-import type { Resource } from "./resource";
 import type { MachineModelHealthStatus } from "./machineResource";
+import type { Resource } from "./resource";
 
 export interface SummaryResource extends Resource {
   TotalMachines: number;

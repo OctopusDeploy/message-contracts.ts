@@ -1,5 +1,5 @@
 import type { ClaimsBasedIdentity } from "./identityResource";
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
 export interface UserResourceLinks {
   Self: string;

@@ -1,6 +1,6 @@
-import ResourceWithId from "./resource";
-import type RetentionPeriod from "./retentionPeriod";
 import type { PhaseResource } from "./phaseResource";
+import type { ResourceWithId } from "./resource";
+import type RetentionPeriod from "./retentionPeriod";
 
 interface LifecycleResourceLinks {
   Self: string;

@@ -1,16 +1,9 @@
-import ResourceWithId from "./resource";
-import type { TaskState } from "./taskState";
-import type { MixedSpaceResource } from "./mixedSpaceResource";
 import type ActionProperties from "./actionProperties";
+import type { MixedSpaceResource } from "./mixedSpaceResource";
 import type { NamedResource } from "./namedResource";
-
-export enum ScriptingLanguage {
-  Bash = "Bash",
-  CSharp = "CSharp",
-  FSharp = "FSharp",
-  PowerShell = "PowerShell",
-  Python = "Python",
-}
+import type { ResourceWithId } from "./resource";
+import type { ScriptingLanguage } from "./scriptingLanguage";
+import type { TaskState } from "./taskState";
 
 export interface ConfigureLetsEncryptArguments {
   DnsName: string;
@@ -78,7 +71,7 @@ export enum TaskRestrictedTo {
 }
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TaskTypeResource extends NamedResource { }
+export interface TaskTypeResource extends NamedResource {}
 
 // used when the client needs to create or do something with a specific task type
 // note: this list is incomplete - the proper list should be obtained via the TaskTypes api endpoint
@@ -105,7 +98,7 @@ export type NewTaskResource<TArguments> = CommonTaskResource<TArguments>;
 
 export interface TaskResource<TArguments = {}>
   extends CommonTaskResource<TArguments>,
-  ResourceWithId {
+    ResourceWithId {
   State: TaskState;
   Completed?: string;
   QueueTime?: string;

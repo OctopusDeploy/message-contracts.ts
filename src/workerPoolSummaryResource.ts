@@ -1,6 +1,6 @@
 import type { MachineModelHealthStatus } from "./machineResource";
 import type { Resource } from "./resource";
-import type WorkerPoolResource from "./workerPoolResource";
+import type { WorkerPoolResource } from "./workerPoolResource";
 
 export interface WorkerPoolSummaryResource extends Resource {
   WorkerPool: WorkerPoolResource;

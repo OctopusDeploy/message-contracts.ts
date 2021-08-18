@@ -1,12 +1,12 @@
-import type NamedResource from "./namedResource";
-import type TenantedDeploymentMode from "./tenantedDeploymentMode";
 import type {
   ConnectivityPolicy,
   GuidedFailureMode,
 } from "./deploymentSettingsResource";
 import type { ICommitCommand } from "./commitCommand";
+import type { NamedResource } from "./namedResource";
 import type { NonVcsRunbookResource } from "./nonVcsRunbookResource";
 import type { RunbookEnvironmentScope } from "./runbookEnvironmentScope";
+import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 import type { VcsRunbookResourceLinks } from "./vcsRunbookResourceLinks";
 
 export type RunbookResource = NonVcsRunbookResource | VcsRunbookResource;
@@ -24,12 +24,12 @@ export function IsNonVcsRunbook(
 
 export interface VcsRunbookResource
   extends NamedResource<VcsRunbookResourceLinks> {
-  Description: string;
   ConnectivityPolicy: ConnectivityPolicy;
-  MultiTenancyMode: TenantedDeploymentMode;
-  EnvironmentScope: RunbookEnvironmentScope;
-  Environments: string[];
   DefaultGuidedFailureMode: GuidedFailureMode;
+  Description: string;
+  Environments: string[];
+  EnvironmentScope: RunbookEnvironmentScope;
+  MultiTenancyMode: TenantedDeploymentMode;
 }
 
 export type NewVcsRunbookResource = Omit<

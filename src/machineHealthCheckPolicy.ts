@@ -1,12 +1,12 @@
 import type MachineScriptPolicy from "./machineScriptPolicy";
 
 export interface MachineHealthCheckPolicy {
+  PowerShellHealthCheckPolicy: MachineScriptPolicy;
   BashHealthCheckPolicy: MachineScriptPolicy;
+  HealthCheckInterval?: string;
   HealthCheckCron?: string;
   HealthCheckCronTimezone?: string;
-  HealthCheckInterval?: string;
   HealthCheckType: HealthCheckType;
-  PowerShellHealthCheckPolicy: MachineScriptPolicy;
 }
 
 export enum HealthCheckType {

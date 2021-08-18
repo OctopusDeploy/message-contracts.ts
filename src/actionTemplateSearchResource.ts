@@ -1,5 +1,12 @@
-import type { LegacyLinks } from "./legacyLinks";
-import type { StepPackageLinks } from "./stepPackageLinks";
+type LegacyLinks = {
+  Logo: string;
+};
+
+type StepPackageLinks = {
+  Logo: string;
+  StepUI: string;
+  Schema: string;
+};
 
 interface ActionTemplateSearchResource {
   Id: string;

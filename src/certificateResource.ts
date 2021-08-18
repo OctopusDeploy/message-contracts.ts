@@ -1,14 +1,14 @@
 import type { Certificate } from "./certificate";
 import type { CertificateDataFormat } from "./certificateDataFormat";
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 import type { SensitiveValue } from "./propertyValueResource";
 import type { SpaceScopedResource } from "./spaceScopedResource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 export interface CertificateResource
   extends ResourceWithId,
-  Certificate,
-  SpaceScopedResource {
+    Certificate,
+    SpaceScopedResource {
   Name: string;
   Notes?: string;
   CertificateData: SensitiveValue;

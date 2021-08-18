@@ -1,5 +1,4 @@
 import type { ControlType } from "./controlType";
-import type { VariableType } from "./variableType";
 
 export type VariableResource = VariableResourceBase<
   ScopeSpecification,
@@ -51,6 +50,16 @@ export interface VariablePromptOptions {
 export interface VariablePromptDisplaySettings {
   "Octopus.ControlType"?: ControlType;
   "Octopus.SelectOptions"?: string;
+}
+
+export enum VariableType {
+  String = "String",
+  Sensitive = "Sensitive",
+  Certificate = "Certificate",
+  AmazonWebServicesAccount = "AmazonWebServicesAccount",
+  AzureAccount = "AzureAccount",
+  GoogleCloudAccount = "GoogleCloudAccount",
+  WorkerPool = "WorkerPool",
 }
 
 export type ReferenceType =

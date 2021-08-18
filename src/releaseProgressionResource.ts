@@ -1,7 +1,7 @@
+import type ChannelProgressionResource from "./channelProgressionResource";
 import type DashboardItemResource from "./dashboardItemResource";
 import type ReleaseResource from "./releaseResource";
 import type RetentionPeriod from "./retentionPeriod";
-import type ChannelProgressionResource from "./channelProgressionResource";
 
 export interface ReleaseProgressionResource {
   Release: ReleaseResource;

@@ -1,7 +1,8 @@
-import type { NewNamedResource } from "./namedResource";
-import type NamedResource from "./namedResource";
-import type { NewSpaceScopedResource } from "./spaceScopedResource";
-import type SpaceScopedResource from "./spaceScopedResource";
+import type { NamedResource, NewNamedResource } from "./namedResource";
+import type {
+  NewSpaceScopedResource,
+  SpaceScopedResource,
+} from "./spaceScopedResource";
 
 interface TenantResourceShared {
   TenantTags: string[];
@@ -21,6 +22,14 @@ export interface NewTenantResource
     NewSpaceScopedResource,
     TenantResourceShared {
   Description?: string;
+}
+
+export interface TagTestResult {
+  [key: string]: {
+    IsMatched: boolean;
+    Reason: string;
+    MissingTags: string[];
+  };
 }
 
 export default TenantResource;

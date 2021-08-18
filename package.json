@@ -1,8 +1,10 @@
 {
   "author": "Octopus Deploy",
+  "bugs": {
+    "url": "https://github.com/OctopusDeployLabs/message-contracts.ts/issues"
+  },
   "description": "Shared TypeScript definitions for Octopus Deploy projects",
   "devDependencies": {
-    "@octokit/types": "^6.25.0",
     "@octopusdeploy/runtime-inputs": "^0.9.1",
     "@types/json-patch": "^0.0.30",
     "@types/lodash": "^4.14.172",
@@ -16,14 +18,14 @@
     "typescript": "^4.3.5"
   },
   "keywords": [
-    "octopus-deploy",
     "api",
+    "octopus-deploy",
     "sdk",
     "toolkit",
     "typescript"
   ],
   "license": "Apache-2.0",
-  "name": "@octopusdeploy/message-contracts.ts",
+  "name": "@octopusdeploy/message-contracts",
   "repository": {
     "type": "git",
     "url": "https://github.com/OctopusDeployLabs/message-contracts.ts.git"
@@ -34,5 +36,6 @@
     "docs": "typedoc --options typedoc.json --readme none",
     "lint": "eslint '{src,test,scripts}/**/*.{js,ts,json}'"
   },
+  "types": "lib/index.d.ts",
   "version": "0.0.0-development"
 }

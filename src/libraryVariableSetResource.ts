@@ -1,5 +1,5 @@
 import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 
 export enum VariableSetContentType {
   Variables = "Variables",

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+
 import type { MachineResource, NewMachineResource } from "./machineResource";
 
 export interface WorkerMachineResource extends MachineResource {

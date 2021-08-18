@@ -1,11 +1,11 @@
 export enum TaskState {
-  Queued = "Queued",
+  Canceled = "Canceled",
+  Cancelling = "Cancelling",
   Executing = "Executing",
   Failed = "Failed",
-  Canceled = "Canceled",
-  TimedOut = "TimedOut",
+  Queued = "Queued",
   Success = "Success",
-  Cancelling = "Cancelling",
+  TimedOut = "TimedOut",
 }
 
 export default TaskState;

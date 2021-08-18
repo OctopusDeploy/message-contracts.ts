@@ -1,13 +1,15 @@
-import ResourceWithId from "./resource";
-import type ActionProperties from "./actionProperties";
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import * as _ from "lodash";
+import type ActionInputs from "./actionInputs";
+import type ActionProperties from "./actionProperties";
+import type { DeploymentActionContainer } from "./deploymentActionContainer";
+import type FeedResource from "./feedResource";
+import { FeedType } from "./feedType";
 import { PackageAcquisitionLocation } from "./packageAcquisitionLocation";
 import type { PackageReference } from "./packageReference";
 import { PackageSelectionMode } from "./packageReference";
-import type FeedResource from "./feedResource";
-import { FeedType } from "./feedResource";
-import type { DeploymentActionContainer } from "./deploymentActionContainer";
-import type ActionInputs from "./actionInputs";
+import type { ResourceWithId } from "./resource";
+import type { RunConditionForAction } from "./runConditionForAction";
 
 export type NameOrIdKey = "Name" | "Id";
 
@@ -40,15 +42,32 @@ export interface DeploymentActionResource extends ResourceWithId {
   Condition?: RunConditionForAction;
 }
 
-export enum RunConditionForAction {
-  Success = "Success",
-  Variable = "Variable",
-}
-
 export default DeploymentActionResource;
 
 export function IsDeployReleaseAction(action: DeploymentActionResource) {
   return !!action.Properties["Octopus.Action.DeployRelease.ProjectId"];
+}
+
+export function IsPrimaryPackageReference(pkg: PackageReference<any>): boolean {
+  return !pkg.Name;
+}
+
+export function RemovePrimaryPackageReference(
+  packages: Array<PackageReference<any>>
+): Array<PackageReference<any>> {
+  return _.filter(packages, (pkg) => !IsPrimaryPackageReference(pkg));
+}
+
+// Returns true if the names match, where null and empty string are equivalent
+export function PackageReferenceNamesMatch(
+  nameA: string | undefined,
+  nameB: string | undefined
+): boolean {
+  if (!nameA) {
+    return !nameB;
+  }
+
+  return nameA === nameB;
 }
 
 export function HasManualInterventionResponsibleTeams(
@@ -65,10 +84,6 @@ export function GetPrimaryPackageReference(
   packages: undefined | Array<PackageReference<any>>
 ): PackageReference<any> {
   return packages?.find((pkg) => IsPrimaryPackageReference(pkg))!;
-}
-
-export function IsPrimaryPackageReference(pkg: PackageReference<any>): boolean {
-  return !pkg.Name;
 }
 
 export function IsNamedPackageReference(pkg: PackageReference): boolean {
@@ -139,22 +154,4 @@ export function InitialisePrimaryPackageReference(
     },
     ...packagesWithoutDefault,
   ];
-}
-
-export function RemovePrimaryPackageReference(
-  packages: Array<PackageReference<any>>
-): Array<PackageReference<any>> {
-  return _.filter(packages, (pkg) => !IsPrimaryPackageReference(pkg));
-}
-
-// Returns true if the names match, where null and empty string are equivalent
-export function PackageReferenceNamesMatch(
-  nameA: string | undefined,
-  nameB: string | undefined
-): boolean {
-  if (!nameA) {
-    return !nameB;
-  }
-
-  return nameA === nameB;
 }

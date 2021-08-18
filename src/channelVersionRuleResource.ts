@@ -1,10 +1,8 @@
-import ResourceWithId from "./resource";
 import type { DeploymentActionPackageResource } from "./deploymentActionPackageResource";
+import type { ResourceWithId } from "./resource";
 
-export interface ChannelVersionRuleResource extends ResourceWithId {
+export default interface ChannelVersionRuleResource extends ResourceWithId {
   Tag: string;
   VersionRange: string;
   ActionPackages: DeploymentActionPackageResource[];
 }
-
-export default ChannelVersionRuleResource;

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import type DeploymentActionResource from "./deploymentActionResource";
 import * as _ from "lodash";
+import type DeploymentActionResource from "./deploymentActionResource";
 
 export interface DeploymentActionPackageResource {
   DeploymentAction: string;

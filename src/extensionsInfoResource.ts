@@ -1,4 +1,4 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
 export interface ExtensionsInfoResource extends ResourceWithId {
   Name: string;

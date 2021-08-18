@@ -1,19 +1,17 @@
-import ResourceWithId from "./resource";
 import type Form from "./form";
+import type { ResourceWithId } from "./resource";
 
-interface InterruptionResource extends ResourceWithId {
-  Title: string;
+export default interface InterruptionResource extends ResourceWithId {
+  CanTakeResponsibility: boolean;
+  CorrelationId: string;
   Created: string;
-  IsPending: boolean;
   Form: Form;
+  HasResponsibility: boolean;
+  IsLinkedToOtherInterruption: boolean;
+  IsPending: boolean;
   RelatedDocumentIds: string[];
   ResponsibleTeamIds: string[];
   ResponsibleUserId: string;
-  CanTakeResponsibility: boolean;
-  HasResponsibility: boolean;
   TaskId: string;
-  IsLinkedToOtherInterruption: boolean;
-  CorrelationId: string;
+  Title: string;
 }
-
-export default InterruptionResource;

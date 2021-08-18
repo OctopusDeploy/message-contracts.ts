@@ -1,12 +1,12 @@
-import type TimeSpanString from "./timeSpan";
 import type { ActivityLogElement } from "./taskDetailsResource";
+import type TimeSpanString from "./timeSpan";
 
 export interface MachineConnectionStatus {
-  MachineId: string;
-  Logs: ActivityLogElement[];
-  Status: string;
   CurrentTentacleVersion: string;
   LastChecked: TimeSpanString;
+  Logs: ActivityLogElement[];
+  MachineId: string;
+  Status: string;
 }
 
 export default MachineConnectionStatus;

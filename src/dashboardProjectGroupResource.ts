@@ -1,8 +1,6 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
-export interface DashboardProjectGroupResource extends ResourceWithId {
+export default interface DashboardProjectGroupResource extends ResourceWithId {
   Name: string;
   EnvironmentIds: string[];
 }
-
-export default DashboardProjectGroupResource;

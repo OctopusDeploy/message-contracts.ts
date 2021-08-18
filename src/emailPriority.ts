@@ -3,5 +3,3 @@ export enum EmailPriority {
   Normal = "Normal",
   High = "High",
 }
-
-export default EmailPriority;

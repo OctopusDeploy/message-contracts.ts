@@ -1,7 +1,7 @@
 export interface NamedReferenceItem {
-  DisplayIdAndName: boolean;
-  DisplayName: string;
   Id: string;
+  DisplayName: string;
+  DisplayIdAndName: boolean;
 }
 
 export default NamedReferenceItem;

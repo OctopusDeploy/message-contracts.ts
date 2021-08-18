@@ -1,7 +1,7 @@
+import type { LinksCollection } from "./linksCollection";
 import type NamedResource from "./namedResource";
-import type LinksCollection from "./linksCollection";
 
-export interface DeploymentTemplateResource
+export default interface DeploymentTemplateResource
   extends DeploymentTemplateBaseResource {
   IsDeploymentProcessModified: boolean;
   DeploymentNotes: string | null;
@@ -22,5 +22,3 @@ export interface DeploymentPromotionTenant extends NamedResource {
 // TODO: Add concrete Links to DeploymentPromotionTarget
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DeploymentPromotionTarget extends NamedResource {}
-
-export default DeploymentTemplateResource;

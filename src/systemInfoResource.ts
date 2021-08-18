@@ -1,12 +1,12 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
 export interface SystemInfoResource extends ResourceWithId {
-  ClrVersion: string;
+  Version: string;
   OSVersion: string;
+  WorkingSetBytes: number;
+  ClrVersion: string;
   ThreadCount: number;
   Uptime: string;
-  Version: string;
-  WorkingSetBytes: number;
 }
 
 export default SystemInfoResource;

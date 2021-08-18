@@ -1,44 +1,25 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import {
-  TriggerActionResource,
-  TriggerActionType,
-  TriggerFilterResource,
-  TriggerFilterType,
-} from "./triggerResource";
 import type {
   IVersionControlReference,
   VcsRef,
 } from "./versionControlledResource";
+import type { DayOfWeek } from "./dayOfWeek";
+import type { MonthlyScheduleType } from "./monthlyScheduleType";
+import type { ScheduleIntervalType } from "./scheduleIntervalType";
+import { TriggerActionResource } from "./triggerActionResource";
+import { TriggerActionType } from "./triggerActionType";
+import { TriggerFilterResource } from "./triggerFilterResource";
+import { TriggerFilterType } from "./triggerFilterType";
+import { TriggerScheduleIntervalType } from "./triggerScheduleIntervalType";
 
 export abstract class TriggerScheduleResource extends TriggerFilterResource {
   Timezone: string = undefined!;
-}
-
-export enum TriggerScheduleIntervalType {
-  OnceDaily = "OnceDaily",
-  OnceHourly = "OnceHourly",
-  OnceEveryMinute = "OnceEveryMinute",
 }
 
 export class TriggerScheduleIntervalResource {
   Interval: TriggerScheduleIntervalType = TriggerScheduleIntervalType.OnceDaily;
   HourInterval?: number;
   MinuteInterval?: number;
-}
-
-export enum MonthlyScheduleType {
-  DateOfMonth = "DateOfMonth",
-  DayOfMonth = "DayOfMonth",
-}
-
-export enum DayOfWeek {
-  Monday = "Monday",
-  Tuesday = "Tuesday",
-  Wednesday = "Wednesday",
-  Thursday = "Thursday",
-  Friday = "Friday",
-  Saturday = "Saturday",
-  Sunday = "Sunday",
 }
 
 export class OnceDailyTriggerScheduleResource extends TriggerScheduleResource {
@@ -138,10 +119,4 @@ export class RunRunbookActionResource extends TriggerActionResource {
     super();
     this.ActionType = TriggerActionType.RunRunbook;
   }
-}
-
-export enum ScheduleIntervalType {
-  Once = "Once",
-  Hour = "Hour",
-  Minute = "Minute",
 }

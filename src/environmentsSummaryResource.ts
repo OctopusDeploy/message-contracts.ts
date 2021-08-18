@@ -1,5 +1,5 @@
-import type SummaryResource from "./summaryResource";
 import type EnvironmentSummaryResource from "./environmentSummaryResource";
+import type SummaryResource from "./summaryResource";
 
 export interface EnvironmentsSummaryResource extends SummaryResource {
   EnvironmentSummaries: EnvironmentSummaryResource[];

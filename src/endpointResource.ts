@@ -1,6 +1,5 @@
+import type { NamedResource, NewNamedResource } from "./namedResource";
 import type { CommunicationStyle } from "./communicationStyle";
-import type { NewNamedResource } from "./namedResource";
-import type NamedResource from "./namedResource";
 
 export type UnstructuredDeploymentTargetResourceInputs =
   | Record<string, unknown>

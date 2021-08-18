@@ -1,5 +1,5 @@
+import type { LinksCollection } from "./linksCollection";
 import type { SpaceRootLinks } from "./spaceRootResource";
-import type LinksCollection from "./linksCollection";
 
 export interface GlobalRootLinks {
   Self: string;

@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "allowUnreachableCode": false,
-    "esModuleInterop": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "es5", "scripthost", "es2017"],
-    "module": "commonjs",
+    "importsNotUsedAsValues": "error",
+    "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -14,13 +14,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "lib",
-    "sourceMap": true,
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es5"
+    "target": "es2018"
   },
   "include": ["src/**/*"]
 }

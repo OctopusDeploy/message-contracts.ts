@@ -1,5 +1,5 @@
-import ResourceWithId from "./resource";
 import type { ProcessType } from "./processType";
+import type { ResourceWithId } from "./resource";
 
 export interface ActionTemplateUsageResource extends ResourceWithId {
   ActionId: string;

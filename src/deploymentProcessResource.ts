@@ -1,27 +1,20 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
-import ResourceWithId from "./resource";
 import type DeploymentStepResource from "./deploymentStepResource";
-import type { RunbookProcessResource } from "./runbookProcessResource";
-import { Permission } from "./permission";
-import { typeSafeHasOwnProperty } from "./utils";
 import type { ICanBeVersionControlled } from "./canBeVersionControlledResource";
 import type { ICommitCommand } from "./commitCommand";
-
-interface DeploymentProcessResourceLinks {
-  Self: string;
-  Project: string;
-  Template: string;
-  Validation: string;
-}
+import { Permission } from "./permission";
+import type { ResourceWithId } from "./resource";
+import type { RunbookProcessResource } from "./runbookProcessResource";
+import { typeSafeHasOwnProperty } from "./utils";
 
 export interface IProcessResource
   extends ResourceWithId<DeploymentProcessResourceLinks> {
   Id: string;
-  SpaceId: string;
-  ProjectId: string;
-  Steps: DeploymentStepResource[];
   LastSnapshotId?: string;
+  ProjectId: string;
+  SpaceId: string;
+  Steps: DeploymentStepResource[];
   Version: number;
 }
 export type DeploymentProcessResource = IProcessResource &

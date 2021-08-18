@@ -1,6 +1,6 @@
-import type DeploymentActionResource from "./deploymentActionResource";
 import type ActionProperties from "./actionProperties";
-import ResourceWithId from "./resource";
+import type DeploymentActionResource from "./deploymentActionResource";
+import type { ResourceWithId } from ".";
 
 export interface DeploymentStepResource extends ResourceWithId {
   Id: string;

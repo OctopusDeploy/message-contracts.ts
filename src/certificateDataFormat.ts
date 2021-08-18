@@ -1,6 +1,6 @@
 export enum CertificateDataFormat {
-  Pkcs12 = "Pkcs12",
   Der = "Der",
   Pem = "Pem",
+  Pkcs12 = "Pkcs12",
   Unknown = "Unknown",
 }

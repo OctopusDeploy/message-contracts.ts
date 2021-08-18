@@ -1,6 +1,6 @@
+import type EndpointResource from "./endpointResource";
 import type { NamedResource } from "./namedResource";
 import type { NewEndpointResource } from "./endpointResource";
-import type EndpointResource from "./endpointResource";
 
 export interface MachineResource extends NamedResource {
   IsDisabled: boolean;

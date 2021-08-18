@@ -1,6 +1,8 @@
-export default interface AzureWebSite {
+export interface AzureWebSite {
   Name: string;
-  Region: string;
   ResourceGroup: string;
+  Region: string;
   // WebSpace: string;
 }
+
+export default AzureWebSite;

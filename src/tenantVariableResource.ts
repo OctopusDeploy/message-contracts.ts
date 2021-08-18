@@ -1,7 +1,7 @@
-import ResourceWithId from "./resource";
 import type { ControlType } from "./controlType";
 import type { LinksCollection } from "./linksCollection";
 import type { PropertyValueResource } from "./propertyValueResource";
+import type { ResourceWithId } from "./resource";
 
 export interface TenantVariableTemplateDisplaySettings {
   "Octopus.SelectOptions"?: string;

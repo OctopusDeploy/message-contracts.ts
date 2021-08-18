@@ -1,9 +1,9 @@
-import ResourceWithId from "./resource";
 import type { MixedSpaceResource } from "./mixedSpaceResource";
+import type { ResourceWithId } from "./resource";
 
 export interface ScopedUserRoleResource
   extends CommonScopedUserRoleResource,
-  ResourceWithId { }
+    ResourceWithId {}
 
 export type NewScopedUserRoleResource = CommonScopedUserRoleResource;
 

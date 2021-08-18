@@ -1,4 +1,4 @@
-import { FeedType } from "./feedResource";
+import { FeedType } from "./feedType";
 
 export function getFeedTypesForActionType(actionType: string): FeedType[] {
   switch (actionType) {

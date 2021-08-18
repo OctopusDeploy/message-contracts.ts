@@ -3,3 +3,5 @@ export enum ActionExecutionLocation {
   AlwaysOnServer = "AlwaysOnServer",
   TargetOrServer = "TargetOrServer",
 }
+
+export default ActionExecutionLocation;

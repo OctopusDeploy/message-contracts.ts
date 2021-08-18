@@ -1,5 +1,5 @@
-import type { NewNamedResource } from "./namedResource";
 import type NamedResource from "./namedResource";
+import type { NewNamedResource } from "./namedResource";
 
 interface SpaceResourceLinks {
   Self: string;

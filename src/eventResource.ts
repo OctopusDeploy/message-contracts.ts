@@ -1,12 +1,12 @@
 import type NamedResource from "./namedResource";
-import ResourceWithId from "./resource";
 import type { OpPatch } from "json-patch";
+import type { ResourceWithId } from "./resource";
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface EventCategoryResource extends NamedResource { }
+export interface EventCategoryResource extends NamedResource {}
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface EventAgentResource extends NamedResource { }
+export interface EventAgentResource extends NamedResource {}
 
 export interface EventReference {
   ReferencedDocumentId: string;
@@ -41,4 +41,4 @@ export interface EventGroupResource extends NamedResource {
 }
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface DocumentTypeResource extends NamedResource { }
+export interface DocumentTypeResource extends NamedResource {}

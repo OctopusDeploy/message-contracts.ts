@@ -1,4 +1,4 @@
-import type LinksCollection from "./linksCollection";
+import type { LinksCollection } from "./linksCollection";
 
 export interface ReleaseTemplatePackage {
   ActionName: string;

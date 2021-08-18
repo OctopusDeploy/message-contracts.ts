@@ -1,36 +1,27 @@
-import type { NewNamedResource } from "./namedResource";
-import type NamedResource from "./namedResource";
-import type { ExtensionSettingsValues } from "./extensionSettingsValues";
+import type { NamedResource, NewNamedResource } from "./namedResource";
 import type {
   NewSpaceScopedResource,
   SpaceScopedResource,
 } from "./spaceScopedResource";
+import type { EnvironmentResourceLinks } from "./environmentResourceLinks";
+import type { ExtensionSettingsValues } from "./extensionSettingsValues";
 
-export interface EnvironmentResourceLinks {
-  Self: string;
-  Machines: string;
-  Metadata: string;
-  SinglyScopedVariableDetails: string;
-}
-
-export interface EnvironmentResource
+export default interface EnvironmentResource
   extends NamedResource<EnvironmentResourceLinks>,
     SpaceScopedResource {
-  Description: string;
-  UseGuidedFailure: boolean;
   AllowDynamicInfrastructure: boolean;
-  SortOrder: number;
+  Description: string;
   ExtensionSettings: ExtensionSettingsValues[];
+  SortOrder: number;
+  UseGuidedFailure: boolean;
 }
 
 export interface NewEnvironmentResource
   extends NewNamedResource,
     NewSpaceScopedResource {
-  Description: string;
-  UseGuidedFailure: boolean;
   AllowDynamicInfrastructure: boolean;
-  SortOrder: number;
+  Description: string;
   ExtensionSettings: ExtensionSettingsValues[];
+  SortOrder: number;
+  UseGuidedFailure: boolean;
 }
-
-export default EnvironmentResource;

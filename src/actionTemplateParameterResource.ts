@@ -1,12 +1,17 @@
-import type { ActionTemplateParameterDisplaySettings } from "./actionTemplateParameterDisplaySettings";
+import type { ControlType } from "./controlType";
 import type { PropertyValueResource } from "./propertyValueResource";
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
+
+export interface ActionTemplateParameterDisplaySettings {
+  "Octopus.SelectOptions"?: string;
+  "Octopus.ControlType"?: ControlType;
+}
 
 export interface ActionTemplateParameterResource extends ResourceWithId {
-  AllowClear?: boolean;
+  Name: string;
+  Label: string;
+  HelpText: string;
   DefaultValue?: PropertyValueResource;
   DisplaySettings: ActionTemplateParameterDisplaySettings;
-  HelpText: string;
-  Label: string;
-  Name: string;
+  AllowClear?: boolean;
 }

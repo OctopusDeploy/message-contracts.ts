@@ -1,6 +1,8 @@
-export default interface AzureWebSiteSlot {
+export interface AzureWebSiteSlot {
   Name: string;
-  ResourceGroupName: string;
   Region: string;
+  ResourceGroupName: string;
   Site: string;
 }
+
+export default AzureWebSiteSlot;

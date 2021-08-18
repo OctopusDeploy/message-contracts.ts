@@ -1,14 +1,12 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
-export interface DashboardProjectResource extends ResourceWithId {
-  Name: string;
-  IsDisabled: boolean;
-  Slug: string;
-  ProjectGroupId: string;
-  EnvironmentIds: string[];
-  TenantedDeploymentMode: TenantedDeploymentMode;
+export default interface DashboardProjectResource extends ResourceWithId {
   CanPerformUntenantedDeployment: boolean;
+  EnvironmentIds: string[];
+  IsDisabled: boolean;
+  Name: string;
+  ProjectGroupId: string;
+  Slug: string;
+  TenantedDeploymentMode: TenantedDeploymentMode;
 }
-
-export default DashboardProjectResource;

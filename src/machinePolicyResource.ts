@@ -11,9 +11,9 @@ export interface MachinePolicyResource extends NamedResource {
   ConnectionRetryTimeLimit: string;
   Description: string;
   IsDefault: boolean;
-  MachineHealthCheckPolicy: MachineHealthCheckPolicy;
-  MachineConnectivityPolicy: MachineConnectivityPolicy;
   MachineCleanupPolicy: MachineCleanupPolicy;
+  MachineConnectivityPolicy: MachineConnectivityPolicy;
+  MachineHealthCheckPolicy: MachineHealthCheckPolicy;
   MachineUpdatePolicy: MachineUpdatePolicy;
   Name: string;
   PollingRequestMaximumMessageProcessingTimeout: string;

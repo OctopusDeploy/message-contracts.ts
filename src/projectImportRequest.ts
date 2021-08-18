@@ -1,5 +1,5 @@
-import type { SensitiveValue } from "./propertyValueResource";
 import type ProjectImportSource from "./projectImportSource";
+import type { SensitiveValue } from "./propertyValueResource";
 
 interface ProjectImportRequest {
   ImportSource: ProjectImportSource;

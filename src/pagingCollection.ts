@@ -1,4 +1,4 @@
-import type { ResourceCollection } from "./resourceCollection";
+import type { ResourceCollection } from ".";
 export type PagingCollection<TResource> = Omit<
   ResourceCollection<TResource>,
   "Links"

@@ -1,17 +1,17 @@
-import ResourceWithId from "./resource";
 import type EnvironmentResource from "./environmentResource";
+import type { ResourceWithId } from "./resource";
 
 export interface EnvironmentSummaryResource extends ResourceWithId {
   Environment: EnvironmentResource;
-  TotalMachines: number;
-  TotalDisabledMachines: number;
-  MachineHealthStatusSummaries: { [key: string]: number };
   MachineEndpointSummaries: {};
+  MachineHealthStatusSummaries: { [key: string]: number };
+  MachineIdsForCalamariUpgrade: string[];
+  MachineIdsForTentacleUpgrade: string[];
   MachineTenantSummaries: {};
   MachineTenantTagSummaries: {};
   TentacleUpgradesRequired: boolean;
-  MachineIdsForCalamariUpgrade: string[];
-  MachineIdsForTentacleUpgrade: string[];
+  TotalDisabledMachines: number;
+  TotalMachines: number;
 }
 
 export default EnvironmentSummaryResource;

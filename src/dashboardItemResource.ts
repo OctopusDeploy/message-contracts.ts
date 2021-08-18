@@ -1,6 +1,6 @@
 import type { TaskState } from "./taskState";
 
-export interface DashboardItemResource {
+export default interface DashboardItemResource {
   ProjectId: string;
   EnvironmentId: string;
   ReleaseId: string;
@@ -25,5 +25,3 @@ export interface DashboardItemResource {
   IsPrevious: boolean;
   IsCompleted: boolean;
 }
-
-export default DashboardItemResource;

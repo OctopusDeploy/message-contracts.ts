@@ -1,10 +1,6 @@
-import type { NamedResource } from "./namedResource";
-import type { NamedReferenceItem } from "./namedReferenceItem";
 import type { MixedSpaceResource } from "./mixedSpaceResource";
-
-export const TeamConstants = {
-  SpaceManagersTeamIdPrefix: "teams-spacemanagers-",
-};
+import type { NamedReferenceItem } from "./namedReferenceItem";
+import type { NamedResource } from "./namedResource";
 
 export interface TeamResource extends NamedResource, MixedSpaceResource {
   ExternalSecurityGroups: NamedReferenceItem[];

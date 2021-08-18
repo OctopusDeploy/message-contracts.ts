@@ -1,14 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import type {
+  NewSpaceScopedResource,
+  SpaceScopedResource,
+} from "./spaceScopedResource";
 import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
-import type { NamedResource } from "./namedResource";
-import type { NewSpaceScopedResource } from "./spaceScopedResource";
-import type { ResourceWithLinks } from "./resource";
-import type { SensitiveValue } from "./propertyValueResource";
-import type { SpaceScopedResource } from "./spaceScopedResource";
-import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 import type { DeploymentActionPackageResource } from "./deploymentActionPackageResource";
-import type { MetadataTypeCollection } from "./dynamicFormResources";
 import type { ExtensionSettingsValues } from "./extensionSettingsValues";
 import type { GitRef } from "./versionControlledResource";
+import type { MetadataTypeCollection } from "./dynamicFormResources";
+import type { NamedResource } from "./namedResource";
+import type { ResourceWithLinks } from "./resource";
+import type { SensitiveValue } from "./propertyValueResource";
+import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 interface BaseProjectResourceLinks {
   Self: string;

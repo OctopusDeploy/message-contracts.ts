@@ -1,9 +1,7 @@
-import ResourceWithId from "./resource";
 import type { ActivityElement } from "./taskDetailsResource";
+import type { ResourceWithId } from "./resource";
 
 // TaskDetailsServerResource in Octopus.Server
-export interface ScheduledTaskDetailsResource extends ResourceWithId {
+export default interface ScheduledTaskDetailsResource extends ResourceWithId {
   ActivityLog: ActivityElement;
 }
-
-export default ScheduledTaskDetailsResource;

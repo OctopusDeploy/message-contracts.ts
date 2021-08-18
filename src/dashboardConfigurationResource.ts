@@ -1,6 +1,6 @@
-import ResourceWithId from "./resource";
+import type { ResourceWithId } from "./resource";
 
-export interface DashboardConfigurationResource extends ResourceWithId {
+export default interface DashboardConfigurationResource extends ResourceWithId {
   IncludedProjectGroupIds: string[];
   IncludedProjectIds: string[];
   IncludedEnvironmentIds: string[];
@@ -8,5 +8,3 @@ export interface DashboardConfigurationResource extends ResourceWithId {
   IncludedTenantTags: string[];
   ProjectLimit?: number;
 }
-
-export default DashboardConfigurationResource;

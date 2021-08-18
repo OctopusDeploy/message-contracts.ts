@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
-import type { NewNamedResource } from "./namedResource";
-import type NamedResource from "./namedResource";
+import type { NamedResource, NewNamedResource } from "./namedResource";
+import { TriggerActionResource } from "./triggerActionResource";
+import { TriggerActionType } from "./triggerActionType";
+import { TriggerFilterResource } from "./triggerFilterResource";
+import { TriggerFilterType } from "./triggerFilterType";
 
 interface CommonTriggerResource {
   ProjectId: string;
@@ -15,30 +18,6 @@ interface CommonTriggerResource {
 export type TriggerResource = NamedResource & CommonTriggerResource;
 
 export type NewTriggerResource = NewNamedResource & CommonTriggerResource;
-
-export interface TriggerResourceTyped<
-  F extends TriggerFilterResource,
-  A extends TriggerActionResource
-> extends TriggerResource {
-  Filter: F;
-  Action: A;
-}
-
-export interface NewTriggerResourceTyped<
-  F extends TriggerFilterResource,
-  A extends TriggerActionResource
-> extends NewTriggerResource {
-  Filter: F;
-  Action: A;
-}
-
-export abstract class TriggerFilterResource {
-  FilterType: TriggerFilterType = undefined!;
-}
-
-export abstract class TriggerActionResource {
-  ActionType: TriggerActionType = undefined!;
-}
 
 export class MachineFilterResource extends TriggerFilterResource {
   EnvironmentIds: string[] = undefined!;
@@ -59,21 +38,6 @@ export class AutoDeployActionResource extends TriggerActionResource {
     super();
     this.ActionType = TriggerActionType.AutoDeploy;
   }
-}
-
-export enum TriggerFilterType {
-  MachineFilter = "MachineFilter",
-  DaysPerMonthSchedule = "DaysPerMonthSchedule",
-  CronExpressionSchedule = "CronExpressionSchedule",
-  ContinuousDailySchedule = "ContinuousDailySchedule",
-  OnceDailySchedule = "OnceDailySchedule",
-}
-
-export enum TriggerActionType {
-  AutoDeploy = "AutoDeploy",
-  DeployLatestRelease = "DeployLatestRelease",
-  DeployNewRelease = "DeployNewRelease",
-  RunRunbook = "RunRunbook",
 }
 
 export enum TriggerActionCategory {

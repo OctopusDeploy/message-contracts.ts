@@ -1,8 +1,8 @@
-import type { SpaceScopedResource } from "./spaceScopedResource";
 import type { DeploymentActionPackageResource } from "./deploymentActionPackageResource";
-import ResourceWithId from "./resource";
 import type { ICanBeVersionControlled } from "./canBeVersionControlledResource";
 import type { ICommitCommand } from "./commitCommand";
+import type { ResourceWithId } from "./resource";
+import type { SpaceScopedResource } from "./spaceScopedResource";
 
 interface DeploymentSettingsResourceLinks {
   Self: string;
@@ -29,8 +29,8 @@ export interface VersioningStrategy {
 
 export interface DeploymentSettingsResource
   extends ResourceWithId<DeploymentSettingsResourceLinks>,
-  SpaceScopedResource,
-  ICanBeVersionControlled {
+    SpaceScopedResource,
+    ICanBeVersionControlled {
   ProjectId: string;
   ConnectivityPolicy: ConnectivityPolicy;
   DefaultGuidedFailureMode: GuidedFailureMode;

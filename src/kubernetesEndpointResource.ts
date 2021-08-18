@@ -3,10 +3,10 @@ import type { CommunicationStyle } from "./communicationStyle";
 import type { DeploymentActionContainer } from "./deploymentActionContainer";
 import type { KubernetesAwsAuthentication } from "./kubernetesAwsAuthentication";
 import type { KubernetesAzureAuthentication } from "./kubernetesAzureAuthentication";
-import type { KubernetesStandardAccountAuthentication } from "./kubernetesStandardAccountAuthentication";
 import type { KubernetesCertificateAuthentication } from "./kubernetesCertificateAuthentication";
-import type { KubernetesPodServiceAccountAuthentication } from "./kubernetesPodServiceAccountAuthentication";
 import type { KubernetesGoogleCloudAuthentication } from "./kubernetesGoogleCloudAuthentication";
+import type { KubernetesPodServiceAccountAuthentication } from "./kubernetesPodServiceAccountAuthentication";
+import type { KubernetesStandardAccountAuthentication } from "./kubernetesStandardAccountAuthentication";
 import type LinksCollection from "./linksCollection";
 
 export interface KubernetesEndpointResource extends AgentlessEndpointResource {
