@@ -21,5 +21,3 @@ export interface UserResource extends ResourceWithId<UserResourceLinks> {
   Identities: ClaimsBasedIdentity[];
   Password?: string;
 }
-
-export default UserResource;

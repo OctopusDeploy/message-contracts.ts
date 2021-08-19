@@ -1,6 +1,6 @@
-import type ActionProperties from "./actionProperties";
+import type { ActionProperties } from "./actionProperties";
 import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 
 export interface CommunityActionTemplateResource extends NamedResource {
   Author: string;

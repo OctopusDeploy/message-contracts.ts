@@ -1,5 +1,5 @@
 import type { IIdName } from "./resource";
-import type RetentionPeriod from "./retentionPeriod";
+import type { RetentionPeriod } from "./retentionPeriod";
 
 export type PhaseResource = IPhasedResource & {
   ReleaseRetentionPolicy?: RetentionPeriod;

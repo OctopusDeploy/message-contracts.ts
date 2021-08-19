@@ -10,4 +10,3 @@ export class TimeSpanString extends String {
   public static OneHour = "0.01:00:00";
   public static TenSeconds = "00:00:10";
 }
-export default TimeSpanString;

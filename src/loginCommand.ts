@@ -1,4 +1,4 @@
-import type LoginState from "./loginState";
+import type { LoginState } from "./loginState";
 
 export interface LoginCommand {
   Username: string;
@@ -6,5 +6,3 @@ export interface LoginCommand {
   RememberMe?: boolean;
   State?: LoginState;
 }
-
-export default LoginCommand;

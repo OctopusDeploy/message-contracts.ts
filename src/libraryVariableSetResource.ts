@@ -12,5 +12,3 @@ export interface LibraryVariableSetResource extends NamedResource {
   ContentType: VariableSetContentType;
   Templates: ActionTemplateParameterResource[];
 }
-
-export default LibraryVariableSetResource;

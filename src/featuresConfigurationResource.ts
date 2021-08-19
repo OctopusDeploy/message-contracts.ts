@@ -11,5 +11,3 @@ export interface FeaturesConfigurationResource
   IsConfigurationAsCodeForRunbooksEnabled: boolean;
   IsStepUiFrameworkEnabled: boolean;
 }
-
-export default FeaturesConfigurationResource;

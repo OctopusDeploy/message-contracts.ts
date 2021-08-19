@@ -29,5 +29,3 @@ export class OctopusError extends Error {
     Object.setPrototypeOf(this, OctopusError.prototype);
   }
 }
-
-export default OctopusError;

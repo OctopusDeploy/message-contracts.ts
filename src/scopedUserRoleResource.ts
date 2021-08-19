@@ -3,7 +3,7 @@ import type { ResourceWithId } from "./resource";
 
 export interface ScopedUserRoleResource
   extends CommonScopedUserRoleResource,
-    ResourceWithId {}
+  ResourceWithId { }
 
 export type NewScopedUserRoleResource = CommonScopedUserRoleResource;
 
@@ -15,5 +15,3 @@ interface CommonScopedUserRoleResource extends MixedSpaceResource {
   EnvironmentIds: string[];
   TenantIds: string[];
 }
-
-export default ScopedUserRoleResource;

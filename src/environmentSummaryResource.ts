@@ -1,4 +1,4 @@
-import type EnvironmentResource from "./environmentResource";
+import type { EnvironmentResource } from "./environmentResource";
 import type { ResourceWithId } from "./resource";
 
 export interface EnvironmentSummaryResource extends ResourceWithId {
@@ -13,5 +13,3 @@ export interface EnvironmentSummaryResource extends ResourceWithId {
   TotalDisabledMachines: number;
   TotalMachines: number;
 }
-
-export default EnvironmentSummaryResource;

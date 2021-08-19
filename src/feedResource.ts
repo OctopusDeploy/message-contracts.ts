@@ -3,37 +3,26 @@
 import type { AwsElasticContainerRegistryFeedResource } from "./awsElasticContainerRegistryFeedResource";
 import type { BuiltInFeedResource } from "./builtInFeedResource";
 import type { DockerFeedResource } from "./dockerFeedResource";
-import type { Feed } from "./feed";
 import { FeedType } from "./feedType";
 import type { GitHubFeedResource } from "./gitHubFeedResource";
 import type { HelmFeedResource } from "./helmFeedResource";
 import type { MavenFeedResource } from "./mavenFeedResource";
 import type { NugetFeedResource } from "./nugetFeedResource";
-import type { ResourceWithId } from "./resource";
+import type { OctopusProjectFeedResource } from "./octopusProjectFeedResource";
 import { every } from "lodash";
 
-export interface OctopusProjectFeedResource
-  extends Feed,
-    ResourceWithId<FeedLinks> {
-  FeedType: FeedType.OctopusProject;
-  Name: string;
-}
-
-type ExternalFeedResource =
+export type ExternalFeedResource =
   | NugetFeedResource
   | DockerFeedResource
   | MavenFeedResource
   | GitHubFeedResource
   | HelmFeedResource
   | AwsElasticContainerRegistryFeedResource;
-type FeedResource =
+
+export type FeedResource =
   | ExternalFeedResource
   | BuiltInFeedResource
   | OctopusProjectFeedResource;
-
-export { ExternalFeedResource };
-
-export default FeedResource;
 
 export function feedTypeCanSearchEmpty(feed: FeedType): boolean {
   return ![

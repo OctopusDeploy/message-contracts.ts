@@ -1,5 +1,5 @@
 import type { Resource, ResourceWithId } from "./resource";
-import type ActionProperties from "./actionProperties";
+import type { ActionProperties } from "./actionProperties";
 import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
 import type { ActionsUpdateProcessResource } from "./actionsUpdateProcessResource";
 import { FeedType } from "./feedType";

@@ -1,3 +1,1 @@
-type ActionInputs = {} | undefined;
-
-export default ActionInputs;
+export type ActionInputs = {} | undefined;

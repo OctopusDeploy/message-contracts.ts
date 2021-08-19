@@ -1,4 +1,4 @@
-interface FeedLinks {
+export interface FeedLinks {
   Self: string;
   SearchPackagesTemplate: string;
   SearchPackageVersionsTemplate: string;

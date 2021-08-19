@@ -4,5 +4,3 @@ export interface AzureWebSite {
   Region: string;
   // WebSpace: string;
 }
-
-export default AzureWebSite;

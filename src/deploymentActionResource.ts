@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import * as _ from "lodash";
-import type ActionInputs from "./actionInputs";
-import type ActionProperties from "./actionProperties";
+import type { ActionInputs } from "./actionInputs";
+import type { ActionProperties } from "./actionProperties";
 import type { DeploymentActionContainer } from "./deploymentActionContainer";
-import type FeedResource from "./feedResource";
+import type { FeedResource } from "./feedResource";
 import { FeedType } from "./feedType";
 import { PackageAcquisitionLocation } from "./packageAcquisitionLocation";
 import type { PackageReference } from "./packageReference";
@@ -21,28 +21,26 @@ function parseCSV(val: string): string[] {
 }
 
 export interface DeploymentActionResource extends ResourceWithId {
-  Id: string;
-  Name: string;
-  Notes: string | null;
   ActionType: string;
-  WorkerPoolId: string | null;
-  WorkerPoolVariable: string | null;
-  Container: DeploymentActionContainer;
-  IsDisabled: boolean;
   CanBeUsedForProjectVersioning: boolean;
+  Channels: string[];
+  Condition?: RunConditionForAction;
+  Container: DeploymentActionContainer;
   Environments: string[];
   ExcludedEnvironments: string[];
-  Channels: string[];
-  TenantTags: string[];
+  Id: string;
+  IsDisabled: boolean;
+  IsRequired: boolean;
+  Name: string;
+  Notes: string | null;
   Packages: PackageReference[];
   Properties: ActionProperties;
-  Inputs?: ActionInputs;
   StepPackageVersion?: string;
-  IsRequired: boolean;
-  Condition?: RunConditionForAction;
+  TenantTags: string[];
+  Inputs?: ActionInputs;
+  WorkerPoolId: string | null;
+  WorkerPoolVariable: string | null;
 }
-
-export default DeploymentActionResource;
 
 export function IsDeployReleaseAction(action: DeploymentActionResource) {
   return !!action.Properties["Octopus.Action.DeployRelease.ProjectId"];

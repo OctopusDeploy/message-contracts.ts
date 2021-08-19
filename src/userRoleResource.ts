@@ -1,4 +1,4 @@
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 import type { Permission } from "./permission";
 
 export const UserRoleConstants = {
@@ -14,5 +14,3 @@ export interface UserRoleResource extends NamedResource {
   GrantedSpacePermissions: Permission[];
   GrantedSystemPermissions: Permission[];
 }
-
-export default UserRoleResource;

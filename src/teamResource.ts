@@ -16,5 +16,3 @@ export interface TeamResource extends NamedResource, MixedSpaceResource {
 export interface TeamNameResource extends NamedResource {
   Name: string;
 }
-
-export default TeamResource;

@@ -29,5 +29,3 @@ export interface ReleaseTemplateResource
   VersioningPackageStepName: string | null;
   VersioningPackageReferenceName: string | null;
 }
-
-export default ReleaseTemplateResource;

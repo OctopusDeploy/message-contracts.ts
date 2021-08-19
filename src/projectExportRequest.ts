@@ -1,8 +1,6 @@
 import type { SensitiveValue } from "./propertyValueResource";
 
-interface ProjectExportRequest {
+export interface ProjectExportRequest {
   IncludedProjectIds: string[];
   Password: SensitiveValue;
 }
-
-export default ProjectExportRequest;

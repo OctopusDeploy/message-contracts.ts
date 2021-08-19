@@ -4,5 +4,3 @@ export interface RunbookRunTemplateResource
   extends DeploymentTemplateBaseResource {
   IsRunbookProcessModified: boolean;
 }
-
-export default RunbookRunTemplateResource;

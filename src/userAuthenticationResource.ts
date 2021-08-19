@@ -5,5 +5,3 @@ export interface UserAuthenticationResource extends ResourceWithId {
   AuthenticationProviders: AuthenticationProviderElement[];
   CanCurrentUserEditIdentitiesForUser: boolean;
 }
-
-export default UserAuthenticationResource;

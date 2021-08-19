@@ -1,5 +1,3 @@
-interface ProjectImportResponse {
+export interface ProjectImportResponse {
   TaskId: string;
 }
-
-export default ProjectImportResponse;

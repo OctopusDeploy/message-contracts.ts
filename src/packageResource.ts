@@ -88,5 +88,3 @@ export interface CommitDetail {
   LinkUrl: string;
   Comment: string;
 }
-
-export default PackageResource;

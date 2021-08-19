@@ -6,9 +6,9 @@ import type {
 import type { EnvironmentResourceLinks } from "./environmentResourceLinks";
 import type { ExtensionSettingsValues } from "./extensionSettingsValues";
 
-export default interface EnvironmentResource
+export interface EnvironmentResource
   extends NamedResource<EnvironmentResourceLinks>,
-    SpaceScopedResource {
+  SpaceScopedResource {
   AllowDynamicInfrastructure: boolean;
   Description: string;
   ExtensionSettings: ExtensionSettingsValues[];
@@ -18,7 +18,7 @@ export default interface EnvironmentResource
 
 export interface NewEnvironmentResource
   extends NewNamedResource,
-    NewSpaceScopedResource {
+  NewSpaceScopedResource {
   AllowDynamicInfrastructure: boolean;
   Description: string;
   ExtensionSettings: ExtensionSettingsValues[];

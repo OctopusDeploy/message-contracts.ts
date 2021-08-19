@@ -75,5 +75,3 @@ export interface RootResource {
   InstallationId: string;
   Links: LinksCollection<GlobalRootLinks | (GlobalRootLinks & SpaceRootLinks)>;
 }
-
-export default RootResource;

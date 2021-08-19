@@ -1,6 +1,6 @@
 import type { VersionControlledPersistenceSettings } from "./projectResource";
 
-export default interface ConvertProjectToVersionControlledCommand {
+export interface ConvertProjectToVersionControlledCommand {
   CommitMessage: string;
   VersionControlSettings: VersionControlledPersistenceSettings;
 }

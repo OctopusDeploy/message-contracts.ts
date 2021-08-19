@@ -1,4 +1,4 @@
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 import type { WorkerPoolType } from "./workerPoolType";
 
 export interface WorkerPoolResourceBase

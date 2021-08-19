@@ -1,6 +1,6 @@
 import type { AgentlessEndpointResource } from "./agentlessEndpointResource";
 import type { CommunicationStyle } from "./communicationStyle";
-import type EndpointResource from "./endpointResource";
+import type { EndpointResource } from "./endpointResource";
 import type { ObjectResourceInputs } from "@octopusdeploy/runtime-inputs";
 
 export interface StepPackageEndpointResource extends AgentlessEndpointResource {

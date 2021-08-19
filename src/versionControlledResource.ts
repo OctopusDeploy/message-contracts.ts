@@ -25,8 +25,6 @@ export interface IVersionControlReference {
 // TODO: decide if we want the user to be able to configure this at a server-wide level.
 export const branchNameToShowByDefault = "main";
 
-const getBasePathToShowByDefault = (projectName: String) => {
+export const getBasePathToShowByDefault = (projectName: String) => {
   return `.octopus/${projectName}`;
 };
-
-export { getBasePathToShowByDefault };

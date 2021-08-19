@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { KubernetesAuthenticationType } from "./kubernetesAuthenticationType";
 import { KubernetesStandardAccountAuthentication } from "./kubernetesStandardAccountAuthentication";
 

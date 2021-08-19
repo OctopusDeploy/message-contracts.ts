@@ -8,5 +8,3 @@ export interface OctopusServerNodeSummaryResource extends NamedResource {
   IsOffline: boolean;
   RunningTaskCount: number;
 }
-
-export default OctopusServerNodeSummaryResource;

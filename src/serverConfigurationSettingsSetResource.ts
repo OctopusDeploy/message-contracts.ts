@@ -10,5 +10,3 @@ export interface ServerConfigurationSettingsSetResource extends ResourceWithId {
   ConfigurationSet: string;
   ConfigurationValues: ServerConfigurationSettingsValueResource[];
 }
-
-export default ServerConfigurationSettingsSetResource;

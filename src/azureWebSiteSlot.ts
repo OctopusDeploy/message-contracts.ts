@@ -4,5 +4,3 @@ export interface AzureWebSiteSlot {
   ResourceGroupName: string;
   Site: string;
 }
-
-export default AzureWebSiteSlot;

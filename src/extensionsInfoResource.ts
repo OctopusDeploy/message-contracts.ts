@@ -7,5 +7,3 @@ export interface ExtensionsInfoResource extends ResourceWithId {
   Version: string;
   IsCustom: boolean;
 }
-
-export default ExtensionsInfoResource;

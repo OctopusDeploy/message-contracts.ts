@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
-import type DeploymentStepResource from "./deploymentStepResource";
+import type { DeploymentProcessResourceLinks } from "./deploymentProcessResourceLinks";
+import type { DeploymentStepResource } from "./deploymentStepResource";
 import type { ICanBeVersionControlled } from "./canBeVersionControlledResource";
 import type { ICommitCommand } from "./commitCommand";
 import { Permission } from "./permission";
@@ -64,5 +65,3 @@ export interface DeploymentProcessOclResource {
 
 export type ModifyDeploymentProcessOclCommand = DeploymentProcessOclResource &
   ICommitCommand;
-
-export default DeploymentProcessResource;

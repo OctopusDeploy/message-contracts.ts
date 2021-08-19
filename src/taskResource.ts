@@ -1,4 +1,4 @@
-import type ActionProperties from "./actionProperties";
+import type { ActionProperties } from "./actionProperties";
 import type { MixedSpaceResource } from "./mixedSpaceResource";
 import type { NamedResource } from "./namedResource";
 import type { ResourceWithId } from "./resource";
@@ -71,7 +71,7 @@ export enum TaskRestrictedTo {
 }
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TaskTypeResource extends NamedResource {}
+export interface TaskTypeResource extends NamedResource { }
 
 // used when the client needs to create or do something with a specific task type
 // note: this list is incomplete - the proper list should be obtained via the TaskTypes api endpoint
@@ -98,7 +98,7 @@ export type NewTaskResource<TArguments> = CommonTaskResource<TArguments>;
 
 export interface TaskResource<TArguments = {}>
   extends CommonTaskResource<TArguments>,
-    ResourceWithId {
+  ResourceWithId {
   State: TaskState;
   Completed?: string;
   QueueTime?: string;
@@ -116,5 +116,3 @@ export interface TaskResource<TArguments = {}>
   CanRerun?: boolean;
   HasWarningsOrErrors: boolean;
 }
-
-export default TaskResource;

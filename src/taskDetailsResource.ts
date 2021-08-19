@@ -65,5 +65,3 @@ export interface TaskDetailsResource extends ResourceWithLinks {
   Progress: TaskProgress;
   PhysicalLogSize: number;
 }
-
-export default TaskDetailsResource;

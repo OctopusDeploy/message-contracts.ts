@@ -5,5 +5,3 @@ export interface RunbookSnapshotTemplateResource
   RunbookProcessId: string;
   NextNameIncrement: string;
 }
-
-export default RunbookSnapshotTemplateResource;

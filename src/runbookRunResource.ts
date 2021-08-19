@@ -15,5 +15,3 @@ export interface CreateRunbookRunRequestResource
   RunbookId: string;
   FrozenRunbookProcessId: string;
 }
-
-export default RunbookRunResource;

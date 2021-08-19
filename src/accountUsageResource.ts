@@ -15,5 +15,3 @@ export interface AccountUsageResource {
   RunbookSnapshots: RunbookSnapshotUsage[];
   Targets: TargetUsageEntry[];
 }
-
-export default AccountUsageResource;

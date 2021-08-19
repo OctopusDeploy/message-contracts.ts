@@ -1,5 +1,5 @@
 import type { ActivityLogElement } from "./taskDetailsResource";
-import type TimeSpanString from "./timeSpan";
+import type { TimeSpanString } from "./timeSpan";
 
 export interface MachineConnectionStatus {
   CurrentTentacleVersion: string;
@@ -8,5 +8,3 @@ export interface MachineConnectionStatus {
   MachineId: string;
   Status: string;
 }
-
-export default MachineConnectionStatus;

@@ -1,4 +1,4 @@
-interface DeploymentProcessResourceLinks {
+export interface DeploymentProcessResourceLinks {
   Project: string;
   Self: string;
   Template: string;

@@ -5,5 +5,3 @@ export interface ExternalSecurityGroupProviderResource {
   SupportsGroupLookup: boolean;
   LookupUri: string;
 }
-
-export default ExternalSecurityGroupProviderResource;

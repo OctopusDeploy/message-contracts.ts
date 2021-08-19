@@ -15,5 +15,3 @@ export function isWorkerMachine(
 ): machine is WorkerMachineResource {
   return (machine as WorkerMachineResource).WorkerPoolIds !== undefined;
 }
-
-export default WorkerMachineResource;

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type { IEndpointWithMultipleAuthentication } from "./endpointResource";
 import { KubernetesAuthenticationType } from "./kubernetesAuthenticationType";
 

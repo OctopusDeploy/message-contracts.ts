@@ -1,7 +1,7 @@
-import type Permission from "./permission";
-import type ProjectedTeamReferenceDataItem from "./projectedTeamReferenceDataItem";
+import type { Permission } from "./permission";
+import type { ProjectedTeamReferenceDataItem } from "./projectedTeamReferenceDataItem";
 import type { ResourceWithId } from "./resource";
-import type UserPermissionRestriction from "./userPermissionRestriction";
+import type { UserPermissionRestriction } from "./userPermissionRestriction";
 
 export type Permissions = Record<string, UserPermissionRestriction[]>;
 
@@ -12,5 +12,3 @@ export interface UserPermissionSetResource extends ResourceWithId {
   IsTeamsComplete: boolean;
   IsPermissionsComplete: boolean;
 }
-
-export default UserPermissionSetResource;

@@ -1,4 +1,4 @@
-import type LinksCollection from "./linksCollection";
+import type { LinksCollection } from "./linksCollection";
 
 export interface IId {
   Id: string;
@@ -17,8 +17,6 @@ export interface ResourceWithLinks<TLinks = {}> {
 
 export interface ResourceWithId<TLinks = {}>
   extends ResourceWithLinks<TLinks>,
-    IId {
+  IId {
   Id: string;
 }
-
-export default ResourceWithId;

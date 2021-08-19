@@ -1,5 +1,5 @@
-import type ActionProperties from "./actionProperties";
-import type DeploymentActionResource from "./deploymentActionResource";
+import type { ActionProperties } from "./actionProperties";
+import type { DeploymentActionResource } from "./deploymentActionResource";
 import type { ResourceWithId } from ".";
 
 export interface DeploymentStepResource extends ResourceWithId {
@@ -29,5 +29,3 @@ export enum PackageRequirement {
   BeforePackageAcquisition = "BeforePackageAcquisition",
   AfterPackageAcquisition = "AfterPackageAcquisition",
 }
-
-export default DeploymentStepResource;

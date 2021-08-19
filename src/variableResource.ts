@@ -1,4 +1,6 @@
-import type { ControlType } from "./controlType";
+import type { ScopeSpecificationTypes } from "./scopeSpecificationTypes";
+import type { VariablePromptOptions } from "./variablePromptOptions";
+import type { VariableType } from "./variableType";
 
 export type VariableResource = VariableResourceBase<
   ScopeSpecification,
@@ -8,7 +10,7 @@ export type VariableResource = VariableResourceBase<
 export interface VariableResourceBase<
   TScopeSpecification extends Readonly<ReadonlyArrays<ScopeSpecificationTypes>>,
   TVariablePromptOptions extends Readonly<VariablePromptOptions>
-> {
+  > {
   Id: string;
   Name: string;
   Value: string | null;
@@ -29,38 +31,6 @@ type ReadonlyArrays<T> = {
 };
 
 export type ScopeSpecification = Arrays<ScopeSpecificationTypes>;
-
-export interface ScopeSpecificationTypes {
-  Environment?: string;
-  Machine?: string;
-  Role?: string;
-  Action?: string;
-  Channel?: string;
-  TenantTag?: string;
-  ProcessOwner?: string;
-}
-
-export interface VariablePromptOptions {
-  Label: string;
-  Description: string;
-  Required: boolean;
-  DisplaySettings: VariablePromptDisplaySettings;
-}
-
-export interface VariablePromptDisplaySettings {
-  "Octopus.ControlType"?: ControlType;
-  "Octopus.SelectOptions"?: string;
-}
-
-export enum VariableType {
-  String = "String",
-  Sensitive = "Sensitive",
-  Certificate = "Certificate",
-  AmazonWebServicesAccount = "AmazonWebServicesAccount",
-  AzureAccount = "AzureAccount",
-  GoogleCloudAccount = "GoogleCloudAccount",
-  WorkerPool = "WorkerPool",
-}
 
 export type ReferenceType =
   | VariableType.Certificate

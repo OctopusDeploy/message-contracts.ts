@@ -1,4 +1,4 @@
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 import type { NewNamedResource } from "./namedResource";
 
 interface SpaceResourceLinks {
@@ -11,11 +11,11 @@ interface SpaceResourceLinks {
 
 export interface SpaceResource
   extends NamedResource<SpaceResourceLinks>,
-    CommonSpaceResource {}
+  CommonSpaceResource { }
 
 export interface NewSpaceResource
   extends NewNamedResource,
-    CommonSpaceResource {}
+  CommonSpaceResource { }
 
 interface CommonSpaceResource {
   Description?: string;

@@ -1,4 +1,5 @@
-import type LinksCollection from "./linksCollection";
+import type { LinksCollection } from "./linksCollection";
+import type { ResourceCollectionLinks } from "./resourceCollectionLinks";
 
 export interface ResourceCollection<TResource> {
   Items: TResource[];
@@ -9,5 +10,3 @@ export interface ResourceCollection<TResource> {
   NumberOfPages: number;
   TotalResults: number;
 }
-
-export default ResourceCollection;

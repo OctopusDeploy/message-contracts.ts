@@ -10,5 +10,3 @@ export interface ProxyResource extends ResourceWithId, SpaceScopedResource {
   Username: string;
   Password: SensitiveValue;
 }
-
-export default ProxyResource;

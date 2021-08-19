@@ -103,7 +103,7 @@ export function HasVersionControlledPersistenceSettings(
 
 export interface ProjectResource
   extends NamedResource<ProjectResourceLinks>,
-    SpaceScopedResource {
+  SpaceScopedResource {
   VariableSetId: string;
   DeploymentProcessId: string;
   DiscreteChannelRelease: boolean;
@@ -118,8 +118,8 @@ export interface ProjectResource
   ExtensionSettings: ExtensionSettingsValues[];
   IsVersionControlled: boolean;
   PersistenceSettings:
-    | VersionControlledPersistenceSettings
-    | DatabasePersistenceSettings;
+  | VersionControlledPersistenceSettings
+  | DatabasePersistenceSettings;
   Slug: string;
   ProjectGroupId: string;
   Description: string;
@@ -130,7 +130,7 @@ export type ProjectOrSummaryResource = ProjectResource | ProjectSummaryResource;
 
 export interface ProjectSummaryResource
   extends NamedResource<BaseProjectResourceLinks>,
-    SpaceScopedResource {
+  SpaceScopedResource {
   Slug: string;
   ProjectGroupId: string;
   Description: string;
@@ -169,11 +169,6 @@ export interface RecentlyViewedProjectIds {
   [key: string]: string[];
 }
 
-export interface ProjectSummary {
-  HasRunbooks: boolean;
-  HasDeploymentProcess: boolean;
-}
-
 export function isVcsBranchResource(
   branch: unknown
 ): branch is VcsBranchResource {
@@ -207,5 +202,3 @@ export function getBranchNameFromRouteParameter(
 
   return undefined;
 }
-
-export default ProjectResource;

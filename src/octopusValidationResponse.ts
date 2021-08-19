@@ -38,8 +38,6 @@ export interface WarningDetailEntry {
   [key: string]: string[];
 }
 
-export default OctopusValidationResponse;
-
 export function createWarningsFromOctopusWarning(
   warning: WarningGuidance
 ): Warnings {

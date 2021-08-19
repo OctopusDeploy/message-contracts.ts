@@ -3,5 +3,3 @@ export enum TenantedDeploymentMode {
   TenantedOrUntenanted = "TenantedOrUntenanted",
   Tenanted = "Tenanted",
 }
-
-export default TenantedDeploymentMode;

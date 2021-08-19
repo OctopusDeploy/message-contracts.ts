@@ -1,5 +1,5 @@
 import type { ProcessReferenceDataItem } from "./referenceDataItem";
-import type ReferenceDataItem from "./referenceDataItem";
+import type { ReferenceDataItem } from "./referenceDataItem";
 
 export interface ScopeValues {
   Actions: ReferenceDataItem[];

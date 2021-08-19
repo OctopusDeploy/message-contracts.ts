@@ -3,5 +3,3 @@ export interface NamedReferenceItem {
   DisplayName: string;
   DisplayIdAndName: boolean;
 }
-
-export default NamedReferenceItem;

@@ -6,5 +6,3 @@ export enum MachineConnectivityBehavior {
   ExpectedToBeOnline = "ExpectedToBeOnline",
   MayBeOfflineAndCanBeSkipped = "MayBeOfflineAndCanBeSkipped",
 }
-
-export default MachineConnectivityPolicy;

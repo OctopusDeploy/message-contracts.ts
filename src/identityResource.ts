@@ -1,4 +1,4 @@
-import type IdentityType from "./identityType";
+import type { IdentityType } from "./identityType";
 
 interface ClaimsBasedIdentity {
   Id: string; // to help in UI lists

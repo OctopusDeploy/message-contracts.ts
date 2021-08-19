@@ -1,15 +1,14 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { KubernetesAuthenticationType } from "./kubernetesAuthenticationType";
 import { KubernetesStandardAccountAuthentication } from "./kubernetesStandardAccountAuthentication";
 
 export class KubernetesAwsAuthentication extends KubernetesStandardAccountAuthentication {
-  UseInstanceRole: boolean = undefined!;
-  AssumeRole: boolean = undefined!;
   AssumedRoleArn: string = undefined!;
   AssumedRoleSession: string = undefined!;
-  AssumeRoleSessionDurationSeconds: number | null = undefined!;
+  AssumeRole: boolean = undefined!;
   AssumeRoleExternalId: string = undefined!;
+  AssumeRoleSessionDurationSeconds: number | null = undefined!;
   ClusterName: string = undefined!;
+  UseInstanceRole: boolean = undefined!;
 
   constructor() {
     super();

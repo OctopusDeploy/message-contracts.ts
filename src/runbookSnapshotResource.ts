@@ -7,5 +7,3 @@ export interface RunbookSnapshotResource extends ISnapshotResource {
   FrozenRunbookProcessId: string;
   FrozenProjectVariableSetId: string;
 }
-
-export default RunbookSnapshotResource;

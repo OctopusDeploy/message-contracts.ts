@@ -22,5 +22,3 @@ export function isDeploymentTarget(
 ): machine is DeploymentTargetResource {
   return (machine as DeploymentTargetResource).EnvironmentIds !== undefined;
 }
-
-export default DeploymentTargetResource;

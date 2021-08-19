@@ -9,5 +9,3 @@ export interface PerformanceConfigurationResource
   extends ResourceWithId<{ Self: string }> {
   DefaultDashboardRenderMode: DashboardRenderMode;
 }
-
-export default PerformanceConfigurationResource;

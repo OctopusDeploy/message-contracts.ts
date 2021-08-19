@@ -10,5 +10,3 @@ export interface ProgressionResource {
   LifecycleEnvironments: { [index: string]: ReferenceDataItem[] };
   Releases: ReleaseProgressionResource[];
 }
-
-export default ProgressionResource;

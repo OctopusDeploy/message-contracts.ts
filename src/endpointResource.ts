@@ -22,5 +22,3 @@ export interface NewEndpointResource extends NewNamedResource {
 export interface IEndpointWithMultipleAuthentication {
   AuthenticationType: string;
 }
-
-export default EndpointResource;

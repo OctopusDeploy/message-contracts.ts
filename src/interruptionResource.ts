@@ -1,7 +1,7 @@
-import type Form from "./form";
+import type { Form } from "./form";
 import type { ResourceWithId } from "./resource";
 
-export default interface InterruptionResource extends ResourceWithId {
+export interface InterruptionResource extends ResourceWithId {
   CanTakeResponsibility: boolean;
   CorrelationId: string;
   Created: string;

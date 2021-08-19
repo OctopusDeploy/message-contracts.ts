@@ -13,5 +13,3 @@ export interface ServerStatusHealthResource {
   IsCompliantWithLicense: boolean;
   Links: LinksCollection<ServerStatusHealthResourceLinks>;
 }
-
-export default ServerStatusHealthResource;

@@ -14,5 +14,3 @@ export enum TentacleUpdateBehavior {
   NeverUpdate = "NeverUpdate",
   Update = "Update",
 }
-
-export default MachineUpdatePolicy;

@@ -1,8 +1,5 @@
-import type {
-  ProcessReferenceDataItem,
-  ReferenceDataItem,
-} from "./referenceDataItem";
 import type { ResourceWithId } from "./resource";
+import type { ScopeValues } from "./scopeValues";
 import type { VariableResource } from "./variableResource";
 
 export interface VariableSetResource extends ResourceWithId<{ Self: string }> {
@@ -10,14 +7,4 @@ export interface VariableSetResource extends ResourceWithId<{ Self: string }> {
   ScopeValues: ScopeValues;
   Variables: VariableResource[];
   Version: number;
-}
-
-export interface ScopeValues {
-  Actions: ReferenceDataItem[];
-  Channels: ReferenceDataItem[];
-  Environments: ReferenceDataItem[];
-  Machines: ReferenceDataItem[];
-  Roles: ReferenceDataItem[];
-  TenantTags: ReferenceDataItem[];
-  Processes: ProcessReferenceDataItem[];
 }

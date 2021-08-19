@@ -65,5 +65,3 @@ export function isAllProjectGroups(
       allProjectGroups[0] === "projectgroups-unrelated")
   );
 }
-
-export default UserPermissionRestriction;

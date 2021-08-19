@@ -7,5 +7,3 @@ export interface NamedResource<TLinks = {}> extends ResourceWithId<TLinks> {
 export interface NewNamedResource {
   Name: string;
 }
-
-export default NamedResource;

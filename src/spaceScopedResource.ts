@@ -6,5 +6,3 @@ export interface SpaceScopedResource {
 export type NewSpaceScopedResource = {
   //Since SpaceId is correctly inferred when creating resources, we don't need to specify it.
 };
-
-export default SpaceScopedResource;

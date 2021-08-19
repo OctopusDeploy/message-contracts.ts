@@ -1,4 +1,4 @@
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 
 export interface ProjectGroupResource
   extends NamedResource<{ Self: string; Projects: string }> {
@@ -7,5 +7,3 @@ export interface ProjectGroupResource
   RetentionPolicyId: string | null;
   SpaceId?: string;
 }
-
-export default ProjectGroupResource;

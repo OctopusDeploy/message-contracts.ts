@@ -7,28 +7,28 @@ import type { KubernetesCertificateAuthentication } from "./kubernetesCertificat
 import type { KubernetesGoogleCloudAuthentication } from "./kubernetesGoogleCloudAuthentication";
 import type { KubernetesPodServiceAccountAuthentication } from "./kubernetesPodServiceAccountAuthentication";
 import type { KubernetesStandardAccountAuthentication } from "./kubernetesStandardAccountAuthentication";
-import type LinksCollection from "./linksCollection";
+import type { LinksCollection } from "./linksCollection";
 
 export interface KubernetesEndpointResource extends AgentlessEndpointResource {
+  AccountType: string;
+  Authentication:
+  | KubernetesAwsAuthentication
+  | KubernetesAzureAuthentication
+  | KubernetesStandardAccountAuthentication
+  | KubernetesCertificateAuthentication
+  | KubernetesPodServiceAccountAuthentication
+  | KubernetesGoogleCloudAuthentication
+  | null;
+  ClusterCertificate: string;
+  ClusterCertificatePath: string;
+  ClusterUrl: string;
+  CommunicationStyle: CommunicationStyle.Kubernetes;
+  Container: DeploymentActionContainer | null;
+  DefaultWorkerPoolId: string | undefined;
   Id: string;
   Links: LinksCollection;
   Name: string;
-  AccountType: string;
-  ClusterUrl: string;
-  ClusterCertificate: string;
-  ClusterCertificatePath: string;
   Namespace: string;
-  SkipTlsVerification: string;
   ProxyId: string;
-  DefaultWorkerPoolId: string | undefined;
-  CommunicationStyle: CommunicationStyle.Kubernetes;
-  Authentication:
-    | KubernetesAwsAuthentication
-    | KubernetesAzureAuthentication
-    | KubernetesStandardAccountAuthentication
-    | KubernetesCertificateAuthentication
-    | KubernetesPodServiceAccountAuthentication
-    | KubernetesGoogleCloudAuthentication
-    | null;
-  Container: DeploymentActionContainer | null;
+  SkipTlsVerification: string;
 }

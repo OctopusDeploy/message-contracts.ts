@@ -1,4 +1,4 @@
-import type NamedReferenceItem from "./namedReferenceItem";
+import type { NamedReferenceItem } from "./namedReferenceItem";
 
 export interface TeamMembership {
   UserId: string;
@@ -8,5 +8,3 @@ export interface TeamMembership {
   ExternalSecurityGroups: NamedReferenceItem[];
   SpaceId?: string;
 }
-
-export default TeamMembership;

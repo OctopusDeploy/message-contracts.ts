@@ -22,5 +22,3 @@ export function isProcessReferenceDataItem(
   const converted = item as ProcessReferenceDataItem;
   return isPropertyDefinedAndNotNull(converted, "ProcessType");
 }
-
-export default ReferenceDataItem;

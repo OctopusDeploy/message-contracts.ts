@@ -1,4 +1,4 @@
-export default interface AzureEnvironment {
+export interface AzureEnvironment {
   AuthenticationEndpoint: string;
   DisplayName: string;
   GraphEndpoint: string;

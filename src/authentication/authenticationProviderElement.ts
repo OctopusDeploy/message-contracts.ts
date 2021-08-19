@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type IdentityType from "../identityType";
-import type LinksCollection from "../linksCollection";
+import type { IdentityType } from "../identityType";
+import type { LinksCollection } from "../linksCollection";
 import type { ResourceWithId } from "../resource";
 
 class AuthenticationProviderElement {

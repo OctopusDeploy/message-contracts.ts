@@ -2,8 +2,6 @@ import type { ResourceWithId } from "./resource";
 
 export interface InvitationResource extends ResourceWithId {
   AddToTeamIds: string[]; //TODO: ReferenceCollection
-  InvitationCode: string;
   Expires: string[]; //TODO: datetimeoffset
+  InvitationCode: string;
 }
-
-export default InvitationResource;

@@ -8,5 +8,3 @@ export interface SystemInfoResource extends ResourceWithId {
   ThreadCount: number;
   Uptime: string;
 }
-
-export default SystemInfoResource;

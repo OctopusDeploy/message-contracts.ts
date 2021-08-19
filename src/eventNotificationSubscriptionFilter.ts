@@ -1,12 +1,12 @@
 export interface EventNotificationSubscriptionFilter {
-  Users: string[];
-  Projects: string[];
-  ProjectGroups: string[];
+  DocumentTypes: string[];
   Environments: string[];
   EventGroups: string[];
   EventCategories: string[];
   EventAgents: string[];
-  Tenants: string[];
+  Projects: string[];
+  ProjectGroups: string[];
   Tags: string[];
-  DocumentTypes: string[];
+  Tenants: string[];
+  Users: string[];
 }

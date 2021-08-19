@@ -7,27 +7,27 @@ import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 export interface CertificateResource
   extends ResourceWithId,
-    Certificate,
-    SpaceScopedResource {
-  Name: string;
-  Notes?: string;
-  CertificateData: SensitiveValue;
-  Password: SensitiveValue;
-  EnvironmentIds: string[];
-  TenantIds: string[];
-  TenantTags: string[];
-  CertificateDataFormat?: CertificateDataFormat;
+  Certificate,
+  SpaceScopedResource {
   Archived?: string;
-  ReplacedBy?: string;
-  SubjectCommonName?: string;
-  SubjectOrganization?: string;
+  CertificateChain?: X509Certificate[];
+  CertificateData: SensitiveValue;
+  CertificateDataFormat?: CertificateDataFormat;
+  EnvironmentIds: string[];
+  HasPrivateKey?: boolean;
   IssuerCommonName?: string;
   IssuerOrganization?: string;
+  Name: string;
+  Notes?: string;
+  Password: SensitiveValue;
+  ReplacedBy?: string;
   SelfSigned?: boolean;
-  HasPrivateKey?: boolean;
-  TenantedDeploymentParticipation?: TenantedDeploymentMode;
   SubjectAlternativeNames?: string[];
-  CertificateChain?: X509Certificate[];
+  SubjectCommonName?: string;
+  SubjectOrganization?: string;
+  TenantedDeploymentParticipation?: TenantedDeploymentMode;
+  TenantIds: string[];
+  TenantTags: string[];
 }
 
 export type X509Certificate = Certificate;

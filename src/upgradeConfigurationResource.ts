@@ -9,5 +9,3 @@ export enum UpgradeNotificationMode {
 export interface UpgradeConfigurationResource extends ResourceWithId {
   NotificationMode: UpgradeNotificationMode;
 }
-
-export default UpgradeConfigurationResource;

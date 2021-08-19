@@ -7,5 +7,3 @@ export enum TaskState {
   Success = "Success",
   TimedOut = "TimedOut",
 }
-
-export default TaskState;

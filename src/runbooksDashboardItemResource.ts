@@ -22,5 +22,3 @@ export interface RunbooksDashboardItemResource {
   Duration?: string;
   IsCompleted: boolean;
 }
-
-export default RunbooksDashboardItemResource;

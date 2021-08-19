@@ -1,6 +1,6 @@
 import type { AccountResourceLinks } from "./accountResourceLinks";
 import type { AccountType } from "./accountType";
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 export interface AccountResource extends NamedResource<AccountResourceLinks> {
@@ -12,5 +12,3 @@ export interface AccountResource extends NamedResource<AccountResourceLinks> {
   TenantIds: string[];
   TenantTags: string[];
 }
-
-export default AccountResource;

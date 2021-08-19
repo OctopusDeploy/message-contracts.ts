@@ -13,5 +13,3 @@ export interface RunbookRetentionPeriod {
   QuantityToKeep: number;
   ShouldKeepForever: boolean;
 }
-
-export default RetentionPeriod;

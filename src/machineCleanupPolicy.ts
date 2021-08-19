@@ -7,5 +7,3 @@ export enum DeleteMachinesBehavior {
   DoNotDelete = "DoNotDelete",
   DeleteUnavailableMachines = "DeleteUnavailableMachines",
 }
-
-export default MachineCleanupPolicy;

@@ -19,5 +19,3 @@ export interface ServerStatusResource {
   MaximumAvailableVersion: string;
   MaximumAvailableVersionCoveredByLicense: string;
 }
-
-export default ServerStatusResource;

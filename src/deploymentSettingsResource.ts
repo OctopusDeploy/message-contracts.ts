@@ -29,8 +29,8 @@ export interface VersioningStrategy {
 
 export interface DeploymentSettingsResource
   extends ResourceWithId<DeploymentSettingsResourceLinks>,
-    SpaceScopedResource,
-    ICanBeVersionControlled {
+  SpaceScopedResource,
+  ICanBeVersionControlled {
   ProjectId: string;
   ConnectivityPolicy: ConnectivityPolicy;
   DefaultGuidedFailureMode: GuidedFailureMode;
@@ -47,5 +47,3 @@ export interface DeploymentSettingsOclResource {
 }
 export type ModifyDeploymentSettingsOclCommand = DeploymentSettingsOclResource &
   ICommitCommand;
-
-export default DeploymentSettingsResource;

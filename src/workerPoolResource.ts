@@ -1,4 +1,4 @@
-import type NamedResource from "./namedResource";
+import type { NamedResource } from "./namedResource";
 import type { WorkerPoolType } from "./workerPoolType";
 
 interface WorkerPoolResourceBase extends NamedResource<{ Self: string }> {
@@ -36,4 +36,3 @@ export type NewWorkerPoolResource =
 export type WorkerPoolResource =
   | StaticWorkerPoolResource
   | DynamicWorkerPoolResource;
-export default WorkerPoolResource;

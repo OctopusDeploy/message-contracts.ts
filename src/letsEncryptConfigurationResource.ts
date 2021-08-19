@@ -11,5 +11,3 @@ export interface LetsEncryptConfigurationResource extends ResourceWithId {
   CertificateThumbprint: string;
   Path: string;
 }
-
-export default LetsEncryptConfigurationResource;

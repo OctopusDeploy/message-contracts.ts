@@ -1,8 +1,8 @@
-import type MachineCleanupPolicy from "./machineCleanupPolicy";
-import type MachineConnectivityPolicy from "./machineConnectivityPolicy";
-import type MachineHealthCheckPolicy from "./machineHealthCheckPolicy";
-import type MachineUpdatePolicy from "./machineUpdatePolicy";
-import type NamedResource from "./namedResource";
+import type { MachineCleanupPolicy } from "./machineCleanupPolicy";
+import type { MachineConnectivityPolicy } from "./machineConnectivityPolicy";
+import type { MachineHealthCheckPolicy } from "./machineHealthCheckPolicy";
+import type { MachineUpdatePolicy } from "./machineUpdatePolicy";
+import type { NamedResource } from "./namedResource";
 
 export interface MachinePolicyResource extends NamedResource {
   ConnectionConnectTimeout: string;
@@ -19,5 +19,3 @@ export interface MachinePolicyResource extends NamedResource {
   PollingRequestMaximumMessageProcessingTimeout: string;
   PollingRequestQueueTimeout: string;
 }
-
-export default MachinePolicyResource;

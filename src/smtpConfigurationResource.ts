@@ -10,5 +10,3 @@ export interface SmtpConfigurationResource extends ResourceWithId {
   SmtpPassword: SensitiveValue;
   Timeout?: number;
 }
-
-export default SmtpConfigurationResource;

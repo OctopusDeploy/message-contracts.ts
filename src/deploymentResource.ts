@@ -5,7 +5,7 @@ import type { ReleaseChanges } from "./releaseChanges";
 import type { ResourceWithId } from "./resource";
 
 // TODO: Add concrete Links
-export default interface DeploymentResource extends IExecutionResource {
+export interface DeploymentResource extends IExecutionResource {
   ReleaseId: string;
   DeploymentProcessId: string;
   ChannelId: string;

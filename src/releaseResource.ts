@@ -4,7 +4,7 @@ import type { IVersionControlReference } from "./versionControlledResource";
 import type { ReleasePackageVersionBuildInformationResource } from "./packageResource";
 import type { ResourceWithId } from "./resource";
 import type { RunbookSnapshotResource } from "./runbookSnapshotResource";
-import type SpaceScopedResource from "./spaceScopedResource";
+import type { SpaceScopedResource } from "./spaceScopedResource";
 import { typeSafeHasOwnProperty } from "./utils";
 
 export interface SelectedPackage {
@@ -16,8 +16,8 @@ export interface SelectedPackage {
 // TODO: Add concrete links
 export interface ReleaseResource
   extends ISnapshotResource,
-    SpaceScopedResource,
-    ResourceWithId {
+  SpaceScopedResource,
+  ResourceWithId {
   ChannelId: string;
   LifecycleId: string;
   Version: string;
@@ -29,7 +29,7 @@ export interface ReleaseResource
 
 export interface ISnapshotResource
   extends ResourceWithId,
-    IVersionControlReference {
+  IVersionControlReference {
   Assembled: string;
   ProjectId: string;
   ProjectVariableSetSnapshotId: string;
@@ -63,5 +63,3 @@ export function isRunbookSnapshotResource(
     converted.Name !== undefined && typeSafeHasOwnProperty(converted, "Name")
   );
 }
-
-export default ReleaseResource;

@@ -48,5 +48,3 @@ export enum LicenseMessageDisposition {
   Warning = "Warning",
   Error = "Error",
 }
-
-export default LicenseStatusResource;

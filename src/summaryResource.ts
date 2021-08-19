@@ -14,5 +14,3 @@ export interface SummaryResource extends Resource {
   MachineIdsForCalamariUpgrade: string[];
   MachineIdsForTentacleUpgrade: string[];
 }
-
-export default SummaryResource;

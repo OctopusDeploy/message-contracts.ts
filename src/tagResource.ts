@@ -6,5 +6,3 @@ export interface TagResource {
   Name: string;
   SortOrder: number;
 }
-
-export default TagResource;

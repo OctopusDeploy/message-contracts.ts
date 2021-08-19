@@ -1,4 +1,4 @@
-import type MachineScriptPolicy from "./machineScriptPolicy";
+import type { MachineScriptPolicy } from "./machineScriptPolicy";
 
 export interface MachineHealthCheckPolicy {
   PowerShellHealthCheckPolicy: MachineScriptPolicy;
@@ -13,5 +13,3 @@ export enum HealthCheckType {
   RunScript = "RunScript",
   OnlyConnectivity = "OnlyConnectivity",
 }
-
-export default MachineHealthCheckPolicy;

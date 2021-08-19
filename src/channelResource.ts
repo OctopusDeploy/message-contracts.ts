@@ -1,8 +1,8 @@
-import type ChannelVersionRuleResource from "./channelVersionRuleResource";
+import type { ChannelVersionRuleResource } from "./channelVersionRuleResource";
 import type { ICommitCommand } from "./commitCommand";
 import type { NamedResource } from "./namedResource";
 
-export default interface ChannelResource extends NamedResource {
+export interface ChannelResource extends NamedResource {
   Description: string;
   ProjectId: string;
   LifecycleId: string | null;

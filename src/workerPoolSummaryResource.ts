@@ -15,5 +15,3 @@ export interface WorkerPoolSummaryResource extends Resource {
   MachineIdsForCalamariUpgrade: string[];
   MachineIdsForTentacleUpgrade: string[];
 }
-
-export default WorkerPoolSummaryResource;

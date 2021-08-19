@@ -1,4 +1,13 @@
-interface ProjectImportPreviewResponse {
+import type { DocumentSummary } from "./documentSummary";
+import type { WorkerPoolSummary } from "./workerPoolSummary";
+
+interface ProjectSummary {
+  Name: string;
+  Channels: string[];
+  Runbooks: string[];
+}
+
+export interface ProjectImportPreviewResponse {
   Accounts: AccountSummary[];
   Certificates: string[];
   Environments: string[];
@@ -8,21 +17,5 @@ interface ProjectImportPreviewResponse {
   WorkerPools: WorkerPoolSummary[];
 }
 
-export interface DocumentSummary {
-  Name: string;
-  Type: string;
-}
-
 export type AccountSummary = DocumentSummary;
 export type FeedSummary = DocumentSummary;
-export interface WorkerPoolSummary extends DocumentSummary {
-  IsDynamic: boolean;
-}
-
-export interface ProjectSummary {
-  Name: string;
-  Channels: string[];
-  Runbooks: string[];
-}
-
-export default ProjectImportPreviewResponse;

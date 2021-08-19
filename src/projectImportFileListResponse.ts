@@ -1,7 +1,5 @@
-import type ProjectImportFile from "./projectImportFile";
+import type { ProjectImportFile } from "./projectImportFile";
 
-interface ProjectImportFileListResponse {
+export interface ProjectImportFileListResponse {
   ProjectImportFiles: ProjectImportFile[];
 }
-
-export default ProjectImportFileListResponse;

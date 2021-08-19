@@ -8,7 +8,7 @@ type StepPackageLinks = {
   Schema: string;
 };
 
-interface ActionTemplateSearchResource {
+export interface ActionTemplateSearchResource {
   Id: string;
   Name: string;
   Version: string | null;
@@ -25,5 +25,3 @@ interface ActionTemplateSearchResource {
   HasUpdate: boolean;
   Links: LegacyLinks | StepPackageLinks;
 }
-
-export default ActionTemplateSearchResource;

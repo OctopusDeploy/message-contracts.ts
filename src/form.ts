@@ -1,31 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { VariablePromptDisplaySettings } from "./variableResource";
+import type { VariablePromptDisplaySettings } from "./variablePromptDisplaySettings";
 
-interface Checkbox extends Control {
+export interface Checkbox extends Control {
   Text: string;
 }
 
-interface Paragraph extends Control {
+export interface Paragraph extends Control {
   Text: string;
   ResolveLinks: boolean;
 }
 
-interface Button {
+export interface Button {
   Text: string;
   Value: any;
   RequiresConfirmation: boolean;
 }
 
-interface SubmitButtonGroup extends Control {
+export interface SubmitButtonGroup extends Control {
   Buttons: Button[];
 }
 
-interface TextArea extends Control {
+export interface TextArea extends Control {
   Label: string;
 }
 
-interface VariableValue extends Control {
+export interface VariableValue extends Control {
   Name: string;
   Label: string;
   Description: string;
@@ -33,7 +33,7 @@ interface VariableValue extends Control {
   DisplaySettings: VariablePromptDisplaySettings;
 }
 
-enum ControlType {
+export enum ControlType {
   Checkbox = "Checkbox",
   Paragraph = "Paragraph",
   Button = "Button",
@@ -42,31 +42,17 @@ enum ControlType {
   VariableValue = "VariableValue",
 }
 
-interface Control {
+export interface Control {
   Type: ControlType;
 }
 
-interface FormElement {
+export interface FormElement {
   Name: string;
   Control: Control;
   IsValueRequired: boolean;
 }
 
-interface Form {
+export interface Form {
   Values: { [name: string]: string };
   Elements: FormElement[];
 }
-
-export {
-  Form,
-  FormElement,
-  Control,
-  ControlType,
-  VariableValue,
-  TextArea,
-  Checkbox,
-  Paragraph,
-  SubmitButtonGroup,
-  Button,
-};
-export default Form;

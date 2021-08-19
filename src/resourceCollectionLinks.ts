@@ -1,4 +1,4 @@
-interface ResourceCollectionLinks {
+export interface ResourceCollectionLinks {
   Self: string;
   Template: string;
   "Page.All": string;
