@@ -4,8 +4,6 @@
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
-    "module": "esnext",
-    "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -13,13 +11,12 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "lib",
-    "strict": true,
+    "outDir": "dist",
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "es2018"
+    "strictPropertyInitialization": true
   },
+  "extends": "@tsconfig/node16/tsconfig.json",
   "include": ["src/**/*"]
 }
