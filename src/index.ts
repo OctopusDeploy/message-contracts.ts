@@ -25,6 +25,8 @@ export * from "./apiKeyCreatedResource";
 export * from "./apiKeyResource";
 export * from "./artifactResource";
 export * from "./authenticationError";
+export * from "./authenticationProviderElement";
+export * from "./authenticationResource";
 export * from "./autoDeployActionResource";
 export * from "./awsElasticContainerRegistryFeedResource";
 export * from "./azureEnvironment";
@@ -97,6 +99,7 @@ export * from "./lifecycleResource";
 export * from "./lifecycleProgressionResource";
 export * from "./linksCollection";
 export * from "./loginCommand";
+export * from "./loginInitiatedResource";
 export * from "./loginState";
 export * from "./machineCleanupPolicy";
 export * from "./machineConnectivityPolicy";
@@ -171,6 +174,8 @@ export * from "./scopeSpecificationTypes"
 export * from "./scopeValues";
 export * from "./scopedUserRoleResource"
 export * from "./scriptingLanguage";
+export * from "./settingsMetadataResource";
+export * from "./settingsValuesResource";
 export * from "./serverConfigurationResource";
 export * from "./serverConfigurationSettingsSetResource";
 export * from "./serverDocumentCount";

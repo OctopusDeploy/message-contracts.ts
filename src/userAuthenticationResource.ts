@@ -1,4 +1,4 @@
-import type { AuthenticationProviderElement } from "./authentication/authenticationProviderElement";
+import type { AuthenticationProviderElement } from "./authenticationProviderElement";
 import type { ResourceWithId } from "./resource";
 
 export interface UserAuthenticationResource extends ResourceWithId {
