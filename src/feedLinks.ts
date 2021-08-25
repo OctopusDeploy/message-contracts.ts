@@ -1,10 +1,10 @@
 export interface FeedLinks {
-  Self: string;
+  BuiltInStatus: string;
+  NotesTemplate: string;
+  Packages: string;
   SearchPackagesTemplate: string;
   SearchPackageVersionsTemplate: string;
-  BuiltInStatus: string;
-  Packages: string;
   SearchTemplate: string;
+  Self: string;
   VersionsTemplate: string;
-  NotesTemplate: string;
 }

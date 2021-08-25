@@ -10,11 +10,11 @@ export interface EventNotificationSubscription
 }
 
 export interface NewEventNotificationSubscription {
-  Filter: EventNotificationSubscriptionFilter;
   EmailTeams: string[]; //TODO: ReferenceCollection
   EmailFrequencyPeriod: string; //TODO: timespan
   EmailShowDatesInTimeZoneId: string;
   EmailPriority: EmailPriority;
+  Filter: EventNotificationSubscriptionFilter;
   WebhookURI: string;
   WebhookTeams: string[]; //TODO: ReferenceCollection
   WebhookTimeout: string; // TODO: timespan

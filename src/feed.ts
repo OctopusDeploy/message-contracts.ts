@@ -3,8 +3,8 @@ import type { PackageAcquisitionLocation } from "./packageAcquisitionLocation";
 
 export interface Feed {
   FeedType: FeedType;
-  PackageAcquisitionLocationOptions?: PackageAcquisitionLocation[];
-  SpaceId?: string;
   LastModifiedOn?: string | null;
   LastModifiedBy?: string | null;
+  PackageAcquisitionLocationOptions?: PackageAcquisitionLocation[];
+  SpaceId?: string;
 }

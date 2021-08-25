@@ -9,31 +9,31 @@ export interface EventCategoryResource extends NamedResource { }
 export interface EventAgentResource extends NamedResource { }
 
 export interface EventReference {
+  Length: number;
   ReferencedDocumentId: string;
   StartIndex: number;
-  Length: number;
 }
 
 export interface EventResource extends ResourceWithId {
   Category: string;
-  UserId: string;
-  Username: string;
+  ChangeDetails: ChangeDetails;
+  Comments: string;
+  Details: string;
   IdentityEstablishedWith: string;
-  UserAgent: string;
+  IsService: boolean;
   Message: string;
   MessageHtml: string;
   MessageReferences: EventReference[];
   Occurred: string;
-  Comments: string;
-  Details: string;
   SpaceId?: string;
-  IsService: boolean;
-  ChangeDetails: ChangeDetails;
+  UserAgent: string;
+  UserId: string;
+  Username: string;
 }
 
 export interface ChangeDetails {
-  DocumentContext: object | null;
   Differences: OpPatch[] | null;
+  DocumentContext: object | null;
 }
 
 export interface EventGroupResource extends NamedResource {
