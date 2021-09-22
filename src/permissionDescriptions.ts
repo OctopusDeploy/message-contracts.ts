@@ -1,7 +1,8 @@
 export interface PermissionDescription {
-  Description: string;
-  SupportedRestrictions: string[];
   CanApplyAtSpaceLevel: boolean;
   CanApplyAtSystemLevel: boolean;
+  Description: string;
+  SupportedRestrictions: string[];
 }
+
 export type PermissionDescriptions = Record<string, PermissionDescription>;

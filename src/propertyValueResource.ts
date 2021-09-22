@@ -2,9 +2,9 @@ export type PropertyValueResource = string | SensitiveValue | null;
 
 export interface SensitiveValue {
   HasValue: boolean;
+  Hint?: string;
   // NewValue can also be null at runtime
   NewValue?: string;
-  Hint?: string;
 }
 
 export function isSensitiveValue(

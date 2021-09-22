@@ -3,7 +3,7 @@ import type { ReferenceDataItem } from "./referenceDataItem";
 
 export interface ProjectedTeamReferenceDataItem
   extends ReferenceDataItem {
-  IsDirectlyAssigned: boolean;
   ExternalSecurityGroups: NamedReferenceItem[];
+  IsDirectlyAssigned: boolean;
   SpaceId?: string;
 }

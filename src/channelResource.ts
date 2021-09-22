@@ -1,3 +1,4 @@
+import type { ChannelOclResource } from "./channelOclResource";
 import type { ChannelVersionRuleResource } from "./channelVersionRuleResource";
 import type { ICommitCommand } from "./commitCommand";
 import type { NamedResource } from "./namedResource";
@@ -10,10 +11,6 @@ export interface ChannelResource extends NamedResource {
   SpaceId: string;
   Rules: ChannelVersionRuleResource[];
   TenantTags: string[];
-}
-
-export interface ChannelOclResource {
-  Ocl: string;
 }
 
 export type ModifyChannelOclCommand = ChannelOclResource & ICommitCommand;

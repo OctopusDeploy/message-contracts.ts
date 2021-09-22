@@ -1,7 +1,7 @@
 export interface OnboardingTaskResource {
-  Name: string;
   Category: string;
   IsEnabled: boolean;
   IsComplete: boolean;
+  Name: string;
   SortOrder: number;
 }

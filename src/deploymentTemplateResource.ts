@@ -1,8 +1,7 @@
 import type { LinksCollection } from "./linksCollection";
 import type { NamedResource } from "./namedResource";
 
-export interface DeploymentTemplateResource
-  extends DeploymentTemplateBaseResource {
+export interface DeploymentTemplateResource extends DeploymentTemplateBaseResource {
   IsDeploymentProcessModified: boolean;
   DeploymentNotes: string | null;
 }

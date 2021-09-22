@@ -1,27 +1,23 @@
 import type { TaskState } from "./taskState";
 
 export interface DashboardItemResource {
-  ProjectId: string;
-  EnvironmentId: string;
-  ReleaseId: string;
-  DeploymentId: string;
-  TaskId: string;
-  TenantId?: string;
   ChannelId: string;
-  ReleaseVersion: string;
-
-  Created: string;
-  QueueTime: string;
-  StartTime: string;
   CompletedTime?: string;
-
-  State: TaskState;
-
+  Created: string;
+  DeploymentId: string;
+  EnvironmentId: string;
+  ErrorMessage?: string;
   HasPendingInterruptions: boolean;
   HasWarningsOrErrors: boolean;
-  ErrorMessage?: string;
-
   IsCurrent: boolean;
   IsPrevious: boolean;
   IsCompleted: boolean;
+  ProjectId: string;
+  QueueTime: string;
+  ReleaseId: string;
+  ReleaseVersion: string;
+  StartTime: string;
+  State: TaskState;
+  TaskId: string;
+  TenantId?: string;
 }

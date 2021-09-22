@@ -7,10 +7,10 @@ export type PhaseResource = IPhasedResource & {
 };
 
 export interface IPhasedResource extends IIdName {
-  Id: string;
-  Name: string;
   AutomaticDeploymentTargets: string[];
-  OptionalDeploymentTargets: string[];
-  MinimumEnvironmentsBeforePromotion: number;
+  Id: string;
   IsOptionalPhase: boolean;
+  MinimumEnvironmentsBeforePromotion: number;
+  Name: string;
+  OptionalDeploymentTargets: string[];
 }

@@ -1,7 +1,7 @@
 export interface ProjectImportFromSpaceSource {
-  Type: "space";
   SpaceId: string;
   TaskId: string;
+  Type: "space";
 }
 
 export interface ProjectImportFromUploadSource {

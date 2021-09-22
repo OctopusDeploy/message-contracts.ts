@@ -1,27 +1,20 @@
-type LegacyLinks = {
-  Logo: string;
-};
-
-type StepPackageLinks = {
-  Logo: string;
-  StepUI: string;
-  Schema: string;
-};
+import type { LegacyLinks } from "./legacyLinks";
+import type { StepPackageLinks } from "./stepPackageLinks";
 
 export interface ActionTemplateSearchResource {
-  Id: string;
-  Name: string;
-  Version: string | null;
-  Description: string;
-  Keywords: string;
   Author: string;
-  Website: string;
-  IsInstalled: boolean;
-  IsBuiltIn: boolean;
   Category: string; // Deprecated
   Categories: string[];
-  Type: string;
   CommunityActionTemplateId?: string;
+  Description: string;
   HasUpdate: boolean;
+  Id: string;
+  IsBuiltIn: boolean;
+  IsInstalled: boolean;
+  Keywords: string;
   Links: LegacyLinks | StepPackageLinks;
+  Name: string;
+  Type: string;
+  Version: string | null;
+  Website: string;
 }

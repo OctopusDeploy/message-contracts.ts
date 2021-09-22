@@ -2,8 +2,8 @@ import type { DocumentSummary } from "./documentSummary";
 import type { WorkerPoolSummary } from "./workerPoolSummary";
 
 interface ProjectSummary {
-  Name: string;
   Channels: string[];
+  Name: string;
   Runbooks: string[];
 }
 

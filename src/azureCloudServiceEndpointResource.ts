@@ -4,12 +4,12 @@ import type { CommunicationStyle } from "./communicationStyle";
 
 export interface AzureCloudServiceEndpointResource
   extends AgentlessEndpointResource {
-  CommunicationStyle: CommunicationStyle.AzureCloudService;
   AccountId: string;
   CloudServiceName: string;
+  CommunicationStyle: CommunicationStyle.AzureCloudService;
   DefaultWorkerPoolId: string | undefined;
-  StorageAccountName: string;
   Slot: AzureCloudServiceEndpointDeploymentSlot;
+  StorageAccountName: string;
   SwapIfPossible: boolean;
   UseCurrentInstanceCount: boolean;
 }

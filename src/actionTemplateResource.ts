@@ -5,14 +5,14 @@ import { FeedType } from "./feedType";
 import type { PackageReference } from "./packageReference";
 
 export interface ActionTemplateResource extends ResourceWithId {
-  Name: string;
-  Description: string;
   ActionType: string;
-  Version: number;
   CommunityActionTemplateId: string;
-  Properties: ActionProperties;
-  Parameters: ActionTemplateParameterResource[];
+  Description: string;
+  Name: string;
   Packages: PackageReference[];
+  Parameters: ActionTemplateParameterResource[];
+  Properties: ActionProperties;
+  Version: number;
 }
 
 export function getFeedTypesForActionType(actionType: string): FeedType[] {

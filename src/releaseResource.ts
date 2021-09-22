@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
 import type { IVersionControlReference } from "./versionControlledResource";
-import type { ReleasePackageVersionBuildInformationResource } from "./packageResource";
+import type { ReleasePackageVersionBuildInformationResource } from "./releasePackageVersionBuildInformationResource";
 import type { ResourceWithId } from "./resource";
 import type { RunbookSnapshotResource } from "./runbookSnapshotResource";
 import type { SpaceScopedResource } from "./spaceScopedResource";

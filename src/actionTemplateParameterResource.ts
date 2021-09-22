@@ -3,10 +3,10 @@ import type { PropertyValueResource } from "./propertyValueResource";
 import type { ResourceWithId } from "./resource";
 
 export interface ActionTemplateParameterResource extends ResourceWithId {
-  Name: string;
-  Label: string;
-  HelpText: string;
+  AllowClear?: boolean;
   DefaultValue?: PropertyValueResource;
   DisplaySettings: ActionTemplateParameterDisplaySettings;
-  AllowClear?: boolean;
+  HelpText: string;
+  Label: string;
+  Name: string;
 }

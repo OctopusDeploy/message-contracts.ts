@@ -3,8 +3,8 @@ import type { OfflineDropDestinationResource } from "./offlineDropDestinationRes
 import type { SensitiveValue } from "./propertyValueResource";
 
 export interface OfflineDropEndpointResource extends AgentlessEndpointResource {
-  Destination: OfflineDropDestinationResource;
-  SensitiveVariablesEncryptionPassword: SensitiveValue;
   ApplicationsDirectory: string;
+  Destination: OfflineDropDestinationResource;
   OctopusWorkingDirectory: string;
+  SensitiveVariablesEncryptionPassword: SensitiveValue;
 }

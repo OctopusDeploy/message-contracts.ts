@@ -2,10 +2,10 @@ import type { ReleaseUsageEntry } from "./releaseUsageEntry";
 import type { RunbookSnapshotUsageEntry } from "./runbookSnapshotUsageEntry";
 
 export interface ProjectUsage {
+  IsCurrentlyBeingUsedInProject: boolean;
   ProjectName: string;
   ProjectSlug: string;
   ProjectId: string;
-  IsCurrentlyBeingUsedInProject: boolean;
   Releases: ReleaseUsageEntry[];
   RunbookSnapshots: RunbookSnapshotUsageEntry[];
 }

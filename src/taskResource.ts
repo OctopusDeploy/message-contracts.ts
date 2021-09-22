@@ -3,6 +3,7 @@ import type { MixedSpaceResource } from "./mixedSpaceResource";
 import type { NamedResource } from "./namedResource";
 import type { ResourceWithId } from "./resource";
 import type { ScriptingLanguage } from "./scriptingLanguage";
+import type { TaskRestrictedTo } from "./taskRestrictedTo";
 import type { TaskState } from "./taskState";
 
 export interface ConfigureLetsEncryptArguments {
@@ -63,30 +64,8 @@ export interface AccountTestTaskArguments {
   AccountId: string;
 }
 
-export enum TaskRestrictedTo {
-  DeploymentTargets = "DeploymentTargets",
-  Workers = "Workers",
-  Policies = "Policies",
-  Unrestricted = "Unrestricted",
-}
-
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TaskTypeResource extends NamedResource { }
-
-// used when the client needs to create or do something with a specific task type
-// note: this list is incomplete - the proper list should be obtained via the TaskTypes api endpoint
-export enum TaskName {
-  Health = "Health",
-  AdHocScript = "AdHocScript",
-  ConfigureLetsEncrypt = "ConfigureLetsEncrypt",
-  Upgrade = "Upgrade",
-  TestEmail = "TestEmail",
-  TestAccount = "TestAccount",
-  SystemIntegrityCheck = "SystemIntegrityCheck",
-  SyncCommunityActionTemplates = "SyncCommunityActionTemplates",
-  SynchronizeBuiltInPackageRepositoryIndex = "SynchronizeBuiltInPackageRepositoryIndex",
-  UpdateCalamari = "UpdateCalamari",
-}
 
 interface CommonTaskResource<TArguments> extends MixedSpaceResource {
   Name: string;
