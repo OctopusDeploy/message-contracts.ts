@@ -203,6 +203,7 @@ export * from "./smtpIsConfiguredResource";
 export * from "./spaceResource";
 export * from "./spaceRootResource";
 export * from "./spaceScopedResource";
+export * from "./spaceSearchResult";
 export * from "./stepPackage";
 export * from "./stepPackageDeploymentTargetType";
 export * from "./stepPackageEndpointResource";
