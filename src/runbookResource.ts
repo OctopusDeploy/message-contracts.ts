@@ -1,7 +1,4 @@
-import type {
-  ConnectivityPolicy,
-  GuidedFailureMode,
-} from "./deploymentSettingsResource";
+import type { ConnectivityPolicy, GuidedFailureMode } from "./deploymentSettingsResource";
 import type { ICommitCommand } from "./commitCommand";
 import type { NamedResource } from "./namedResource";
 import type { NonVcsRunbookResource } from "./nonVcsRunbookResource";
