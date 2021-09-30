@@ -24,11 +24,11 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "name": "@octopusdeploy/message-contracts",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/OctopusDeploy/message-contracts.ts.git"
   },
-  "private": true,
   "scripts": {
     "build": "tsc --p tsconfig.json",
     "docs": "typedoc --options typedoc.json --readme none"
