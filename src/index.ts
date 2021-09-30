@@ -174,12 +174,14 @@ export * from "./resourceCollectionLinks";
 export * from "./retentionDefaultConfigurationResource"
 export * from "./retentionPeriod";
 export * from "./rootResource";
-export * from "./runbookResource";
 export * from "./runbookProgressionResource";
-export * from "./runbooksDashboardItemResource";
 export * from "./runbookProcessResource";
+export * from "./runbooksDashboardItemResource";
 export * from "./runbookSnapshotResource";
 export * from "./runbookSnapshotTemplateResource";
+export * from "./runbookResource";
+export * from "./runbookResourceLinks";
+export * from "./runbookRunParameters";
 export * from "./runbookRunResource";
 export * from "./runbookRunTemplateResource";
 export * from "./scheduledProjectTriggerResource";
