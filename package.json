@@ -13,6 +13,7 @@
     "typedoc": "^0.22.6",
     "typescript": "^4.4.4"
   },
+  "files": ["dist/**/*"],
   "homepage": "https://github.com/OctopusDeploy/message-contracts.ts#readme",
   "keywords": [
     "api",
