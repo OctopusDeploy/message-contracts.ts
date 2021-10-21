@@ -3,7 +3,7 @@
   "bugs": {
     "url": "https://github.com/OctopusDeploy/message-contracts.ts/issues"
   },
-  "description": "Shared TypeScript definitions for Octopus Deploy projects",
+  "description": "Shared TypeScript definitions for Octopus Deploy API operations.",
   "devDependencies": {
     "@octopusdeploy/runtime-inputs": "^0.16.0",
     "@tsconfig/node16": "^1.0.2",
@@ -21,7 +21,7 @@
     "node",
     "octopus deploy"
   ],
-  "license": "Apache-2.0",
+  "license": "https://github.com/OctopusDeploy/message-contracts.ts/blob/main/LICENSE",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "name": "@octopusdeploy/message-contracts",
@@ -33,7 +33,11 @@
   "scripts": {
     "build": "tsc --p tsconfig.json",
     "docs": "typedoc --options typedoc.json --readme none",
-    "prepublish": "tsc --p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "test": "jest --config jestconfig.json"
   },
   "types": "dist/index.d.ts",
   "version": "0.1.0"
