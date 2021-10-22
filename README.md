@@ -1,2 +1,3 @@
 # message-contracts.ts
-Shared TypeScript definitions for Octopus Deploy projects
+
+Shared TypeScript definitions for Octopus Deploy API messages.
