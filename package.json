@@ -10,7 +10,7 @@
     "@types/json-patch": "^0.0.30",
     "@types/lodash": "^4.14.176",
     "moment": "^2.29.1",
-    "typedoc": "^0.22.6",
+    "typedoc": "^0.22.7",
     "typescript": "^4.4.4"
   },
   "files": ["dist/**/*"],
