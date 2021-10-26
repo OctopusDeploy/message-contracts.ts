@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.0.1...v1.0.2) (2021-10-26)
+
+
+### Bug Fixes
+
+* removed private flag ([d64dc4e](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/d64dc4e1db27ae29775d5fe33aa4eca33f00a114))
+
 ### [1.0.1](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.0.0...v1.0.1) (2021-10-26)
 
 
