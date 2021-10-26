@@ -13,7 +13,9 @@
     "typedoc": "^0.22.7",
     "typescript": "^4.4.4"
   },
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "homepage": "https://github.com/OctopusDeploy/message-contracts.ts#readme",
   "keywords": [
     "api",
@@ -35,8 +37,8 @@
     "docs": "typedoc --options typedoc.json --readme none",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
     "test": "jest --config jestconfig.json"
   },
   "types": "dist/index.d.ts",
