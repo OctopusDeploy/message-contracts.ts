@@ -3,7 +3,7 @@
   "bugs": {
     "url": "https://github.com/OctopusDeploy/message-contracts.ts/issues"
   },
-  "description": "Shared TypeScript definitions for Octopus Deploy API operations.",
+  "description": "Shared TypeScript definitions for Octopus Deploy API operations",
   "devDependencies": {
     "@octopusdeploy/runtime-inputs": "^0.16.0",
     "@tsconfig/node16": "^1.0.2",
@@ -29,7 +29,7 @@
   "name": "@octopusdeploy/message-contracts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OctopusDeploy/message-contracts.ts.git"
+    "url": "git+https://github.com/OctopusDeploy/message-contracts.ts.git"
   },
   "scripts": {
     "build": "tsc --p tsconfig.json",
