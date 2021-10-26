@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.0.0...v1.0.1) (2021-10-26)
+
+
+### Miscellaneous Chores
+
+* release 1.0.1 ([eeb6c7d](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/eeb6c7dcf515da3745d49de4d362b39d6ab20b2d))
+
 ## 1.0.0 (2021-10-26)
 
 
