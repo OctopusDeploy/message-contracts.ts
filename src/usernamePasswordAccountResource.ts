@@ -1,5 +1,5 @@
 import type { AccountResource, NewAccountResource } from "./accountResource";
-import type { AccountType } from "./accountType";
+import { AccountType } from "./accountType";
 import type { SensitiveValue } from "./propertyValueResource";
 
 export interface UsernamePasswordAccountResource extends AccountResource {
@@ -12,4 +12,13 @@ export interface NewUsernamePasswordAccountResource extends NewAccountResource {
   AccountType: AccountType.UsernamePassword;
   Password: SensitiveValue;
   Username: string;
+}
+
+export function NewUsernamePasswordAccount(name: string, username: string, password: SensitiveValue): NewUsernamePasswordAccountResource {
+  return {
+    AccountType: AccountType.UsernamePassword,
+    Name: name,
+    Password: password,
+    Username: username
+  }
 }
