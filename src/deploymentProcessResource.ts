@@ -4,6 +4,7 @@ import type { DeploymentProcessResourceLinks } from "./deploymentProcessResource
 import type { DeploymentStepResource } from "./deploymentStepResource";
 import type { ICanBeVersionControlled } from "./canBeVersionControlledResource";
 import type { ICommitCommand } from "./commitCommand";
+import type { NewSpaceScopedResource } from "./spaceScopedResource";
 import { Permission } from "./permission";
 import type { ResourceWithId } from "./resource";
 import type { RunbookProcessResource } from "./runbookProcessResource";
@@ -22,6 +23,10 @@ export type DeploymentProcessResource = IProcessResource &
   ICanBeVersionControlled;
 export type ModifyDeploymentProcessCommand = DeploymentProcessResource &
   ICommitCommand;
+
+export interface NewDeploymentProcessResource extends NewSpaceScopedResource {
+  ProjectId: string;
+}
 
 export function isDeploymentProcessResource(
   resource: IProcessResource | null | undefined
