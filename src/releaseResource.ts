@@ -27,6 +27,16 @@ export interface ReleaseResource
   BuildInformation: ReleasePackageVersionBuildInformationResource[];
 }
 
+export interface NewReleaseResource {
+  BuildInformation?: ReleasePackageVersionBuildInformationResource[];
+  ChannelId: string;
+  IgnoreChannelRules?: boolean;
+  ProjectDeploymentProcessSnapshotId?: string;
+  ProjectId: string;
+  ReleaseNotes?: string;
+  Version: string;
+}
+
 export interface ISnapshotResource
   extends ResourceWithId,
   IVersionControlReference {
