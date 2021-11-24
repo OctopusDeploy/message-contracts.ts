@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.0.0...v1.1.0) (2021-11-24)
+
+
+### Features
+
+* **accounts:** added types and functions to accounts ([7166d8f](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/7166d8f48696bf1cfcf249773dd41a28b8c05c3a))
+* **channels:** added functions for new channels ([ad9605a](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/ad9605a568bc90583ef9ed3617d5833344ed000b))
+* **core:** added sensitive value function ([9c6f904](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/9c6f9043eaee87022e54ddb48d7e4339ecfd66fe))
+* **deployments:** added types and functions to deployments ([e959a0b](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/e959a0b1449fee2cd00f65135d2a79857b7416d3))
+* **releases:** added function for new releases ([67421e8](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/67421e8fe692318f378f10846c4b802d7feaa247))
+
+
+### Miscellaneous Chores
+
+* release 1.1.0 ([541add4](https://www.github.com/OctopusDeploy/message-contracts.ts/commit/541add4dee659ad20ba8f009a8c9f410885355b2))
+
 ## [1.0.0](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.0.0...v1.0.0) (2021-10-26)
 
 
