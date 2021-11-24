@@ -12,6 +12,15 @@ export interface DeploymentResource extends IExecutionResource {
   ForcePackageRedeployment: boolean;
 }
 
+export interface NewDeploymentResource {
+  ChannelId?: string;
+  DeploymentProcessId?: string;
+  EnvironmentId: string;
+  ExcludedMachineIds?: string[];
+  ForcePackageRedeployment?: boolean;
+  ReleaseId: string;
+}
+
 export interface IExecutionResource extends ResourceWithId {
   Changes: ReleaseChanges[];
   ChangesMarkdown: string;

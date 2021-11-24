@@ -30,6 +30,7 @@ export * from "./authenticationResource";
 export * from "./autoDeployActionResource";
 export * from "./awsElasticContainerRegistryFeedResource";
 export * from "./azureEnvironment";
+export * from "./azureServicePrincipalAccountResource";
 export * from "./azureWebSite";
 export * from "./azureWebSiteSlot";
 export * from "./builtInFeedLinks";
@@ -89,6 +90,7 @@ export * from "./externalSecurityGroupProviderResource";
 export * from "./featuresConfigurationResource";
 export * from "./feedResource"
 export * from "./feedType";
+export * from "./googleCloudAccountResource";
 export * from "./identityMetadataResource";
 export * from "./identityResource";
 export * from "./identityType";
