@@ -15,17 +15,26 @@ export interface ChannelResource extends NamedResource {
 }
 
 export interface NewChannelResource extends NewSpaceScopedResource {
+  Description?: string;
+  IsDefault?: boolean;
+  LifecycleId?: string;
   Name: string;
   ProjectId: string;
+  Rules?: ChannelVersionRuleResource[];
+  SpaceId?: string;
+  TenantTags?: string[];
 }
 
-export function NewChannel(name: string, projectId: string): NewChannelResource {
+export function NewChannel(
+  name: string,
+  projectId: string
+): NewChannelResource {
   return {
     Name: name,
-    ProjectId: projectId
-  }
+    ProjectId: projectId,
+  };
 }
 
 export type ModifyChannelOclCommand = ChannelOclResource & ICommitCommand;
 export type ModifyChannelCommand = ChannelResource & ICommitCommand;
-export type CreateChannelCommand = ChannelResource & ICommitCommand;
+export type CreateChannelCommand = NewChannelResource & ICommitCommand;
