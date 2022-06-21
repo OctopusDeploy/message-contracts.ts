@@ -1,5 +1,5 @@
-import type { NamedResource, NewNamedResource } from "./namedResource";
 import type { CommonTriggerResource } from "./commonTriggerResource";
+import type { NamedResource, NewNamedResource } from "./namedResource";
 
 export type TriggerResource = NamedResource & CommonTriggerResource;
 export type NewTriggerResource = NewNamedResource & CommonTriggerResource;

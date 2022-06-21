@@ -10,7 +10,7 @@ export type VariableResource = VariableResourceBase<
 export interface VariableResourceBase<
   TScopeSpecification extends Readonly<ReadonlyArrays<ScopeSpecificationTypes>>,
   TVariablePromptOptions extends Readonly<VariablePromptOptions>
-  > {
+> {
   Id: string;
   Name: string;
   Value: string | null;

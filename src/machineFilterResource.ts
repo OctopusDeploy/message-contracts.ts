@@ -1,5 +1,5 @@
-import { TriggerFilterType } from "./triggerFilterType";
 import { TriggerFilterResource } from "./triggerFilterResource";
+import { TriggerFilterType } from "./triggerFilterType";
 
 export class MachineFilterResource extends TriggerFilterResource {
   EnvironmentIds: string[] = undefined!;

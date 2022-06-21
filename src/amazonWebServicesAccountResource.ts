@@ -8,17 +8,22 @@ export interface AmazonWebServicesAccountResource extends AccountResource {
   SecretKey: SensitiveValue;
 }
 
-export interface NewAmazonWebServicesAccountResource extends NewAccountResource {
+export interface NewAmazonWebServicesAccountResource
+  extends NewAccountResource {
   AccessKey: string;
   AccountType: AccountType.AmazonWebServicesAccount;
   SecretKey: SensitiveValue;
 }
 
-export function NewAmazonWebServicesAccount(name: string, accessKey: string, secretKey: SensitiveValue): NewAmazonWebServicesAccountResource {
+export function NewAmazonWebServicesAccount(
+  name: string,
+  accessKey: string,
+  secretKey: SensitiveValue
+): NewAmazonWebServicesAccountResource {
   return {
     AccessKey: accessKey,
     AccountType: AccountType.AmazonWebServicesAccount,
     Name: name,
-    SecretKey: secretKey
-  }
+    SecretKey: secretKey,
+  };
 }
