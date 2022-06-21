@@ -1,5 +1,5 @@
-import { AccountType } from ".";
 import type { AccountResource, NewAccountResource } from "./accountResource";
+import { AccountType } from "./accountType";
 import type { SensitiveValue } from "./propertyValueResource";
 
 export interface AzureServicePrincipalAccountResource extends AccountResource {
@@ -12,7 +12,8 @@ export interface AzureServicePrincipalAccountResource extends AccountResource {
   TenantId: string;
 }
 
-export interface NewAzureServicePrincipalAccountResource extends NewAccountResource {
+export interface NewAzureServicePrincipalAccountResource
+  extends NewAccountResource {
   ActiveDirectoryEndpointBaseUri?: string;
   AzureEnvironment?: string;
   ClientId: string;
@@ -22,13 +23,19 @@ export interface NewAzureServicePrincipalAccountResource extends NewAccountResou
   TenantId: string;
 }
 
-export function NewAzureServicePrincipalAccount(name: string, subscriptionId: string, tenantId: string, applicationId: string, applicationPassword: SensitiveValue): NewAzureServicePrincipalAccountResource {
+export function NewAzureServicePrincipalAccount(
+  name: string,
+  subscriptionId: string,
+  tenantId: string,
+  applicationId: string,
+  applicationPassword: SensitiveValue
+): NewAzureServicePrincipalAccountResource {
   return {
     AccountType: AccountType.AzureServicePrincipal,
     ClientId: applicationId,
     Name: name,
     Password: applicationPassword,
     SubscriptionNumber: subscriptionId,
-    TenantId: tenantId
-  }
+    TenantId: tenantId,
+  };
 }

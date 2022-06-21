@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
-import type { EventNotificationSubscription, NewEventNotificationSubscription } from "./eventNotificationSubscription";
+import type {
+  EventNotificationSubscription,
+  NewEventNotificationSubscription,
+} from "./eventNotificationSubscription";
 import type { MixedSpaceResource } from "./mixedSpaceResource";
-import type { NamedResource } from "./namedResource";
-import type { NewNamedResource } from "./namedResource";
+import type { NamedResource, NewNamedResource } from "./namedResource";
 
 interface CommonSubscriptionResource extends MixedSpaceResource {
   Type: SubscriptionType;
@@ -12,13 +14,13 @@ interface CommonSubscriptionResource extends MixedSpaceResource {
 
 export interface SubscriptionResource
   extends NamedResource,
-  CommonSubscriptionResource {
+    CommonSubscriptionResource {
   EventNotificationSubscription: EventNotificationSubscription;
 }
 
 export interface NewSubscriptionResource
   extends NewNamedResource,
-  CommonSubscriptionResource {
+    CommonSubscriptionResource {
   EventNotificationSubscription: NewEventNotificationSubscription;
 }
 
