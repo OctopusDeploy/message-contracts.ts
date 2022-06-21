@@ -1,8 +1,8 @@
-import type { ResourceWithId } from "./resource";
 import type { ActionProperties } from "./actionProperties";
 import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
 import { FeedType } from "./feedType";
 import type { PackageReference } from "./packageReference";
+import type { ResourceWithId } from "./resource";
 
 export interface ActionTemplateResource extends ResourceWithId {
   ActionType: string;

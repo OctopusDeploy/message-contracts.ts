@@ -1,6 +1,6 @@
 import type { FeedType } from "./feedType";
-import type { RetryFeed } from "./retryFeed";
 import type { SensitiveValue } from "./propertyValueResource";
+import type { RetryFeed } from "./retryFeed";
 
 export interface NugetFeedResource extends RetryFeed {
   EnhancedMode: boolean;

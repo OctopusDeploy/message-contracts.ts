@@ -27,5 +27,5 @@ export interface ReleaseTemplateResource
   LastReleaseVersion: string | null;
   NextVersionIncrement: string;
   VersioningPackageStepName: string | null;
-  VersioningPackageReferenceName: string | null;
+  VersioningPackageReferenceName?: string;
 }

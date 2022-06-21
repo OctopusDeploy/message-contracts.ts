@@ -1,5 +1,5 @@
-import { AccountType } from ".";
 import type { AccountResource, NewAccountResource } from "./accountResource";
+import { AccountType } from "./accountType";
 import type { SensitiveValue } from "./propertyValueResource";
 
 export interface GoogleCloudAccountResource extends AccountResource {
@@ -10,10 +10,13 @@ export interface NewGoogleCloudAccountResource extends NewAccountResource {
   JsonKey: SensitiveValue;
 }
 
-export function NewGoogleCloudAccount(name: string, jsonKey: SensitiveValue): NewGoogleCloudAccountResource {
+export function NewGoogleCloudAccount(
+  name: string,
+  jsonKey: SensitiveValue
+): NewGoogleCloudAccountResource {
   return {
     AccountType: AccountType.GoogleCloudAccount,
     JsonKey: jsonKey,
-    Name: name
-  }
+    Name: name,
+  };
 }

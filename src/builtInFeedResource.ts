@@ -5,7 +5,7 @@ import type { ResourceWithId } from "./resource";
 
 export interface BuiltInFeedResource
   extends Feed,
-  ResourceWithId<BuiltInFeedLinks> {
+    ResourceWithId<BuiltInFeedLinks> {
   DeleteUnreleasedPackagesAfterDays?: number;
   FeedType: FeedType.BuiltIn;
   IsBuiltInRepoSyncEnabled: boolean;

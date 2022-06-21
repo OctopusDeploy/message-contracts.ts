@@ -1,20 +1,34 @@
-import type { EndpointResource } from "./endpointResource";
+import type { EndpointResource, NewEndpointResource } from "./endpointResource";
 import type { NamedResource } from "./namedResource";
-import type { NewEndpointResource } from "./endpointResource";
 
 export interface MachineResource extends NamedResource {
+  Endpoint: EndpointResource;
   IsDisabled: boolean;
-  MachinePolicyId: string;
+  IsInProcess: boolean;
   HealthStatus: MachineModelHealthStatus;
   HasLatestCalamari: boolean;
+  MachinePolicyId: string;
   StatusSummary: string;
-  IsInProcess: boolean;
-  Endpoint: EndpointResource;
 }
 
 export type NewMachineResource = {
   Endpoint: NewEndpointResource;
 } & Omit<MachineResource, "Id" | "Links" | "Endpoint" | "StatusSummary">;
+
+export function NewMachine(
+  name: string,
+  endpoint: NewEndpointResource
+): NewMachineResource {
+  return {
+    IsDisabled: false,
+    IsInProcess: false,
+    Endpoint: endpoint,
+    HealthStatus: MachineModelHealthStatus.Unknown,
+    Name: name,
+    HasLatestCalamari: false,
+    MachinePolicyId: "",
+  };
+}
 
 export enum MachineModelHealthStatus {
   Healthy = "Healthy",

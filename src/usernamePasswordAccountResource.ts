@@ -14,11 +14,15 @@ export interface NewUsernamePasswordAccountResource extends NewAccountResource {
   Username: string;
 }
 
-export function NewUsernamePasswordAccount(name: string, username: string, password: SensitiveValue): NewUsernamePasswordAccountResource {
+export function NewUsernamePasswordAccount(
+  name: string,
+  username: string,
+  password: SensitiveValue
+): NewUsernamePasswordAccountResource {
   return {
     AccountType: AccountType.UsernamePassword,
     Name: name,
     Password: password,
-    Username: username
-  }
+    Username: username,
+  };
 }

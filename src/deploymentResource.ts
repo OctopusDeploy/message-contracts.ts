@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-import type { Moment } from "moment";
 import type { ReleaseChanges } from "./releaseChanges";
 import type { ResourceWithId } from "./resource";
 
@@ -33,8 +30,8 @@ export interface IExecutionResource extends ResourceWithId {
   ManifestVariableSetId: string;
   Name: string;
   ProjectId: string;
-  QueueTime?: Moment;
-  QueueTimeExpiry?: Moment;
+  QueueTime?: Date;
+  QueueTimeExpiry?: Date;
   SkipActions: string[];
   SpecificMachineIds: string[];
   TaskId: string;
@@ -55,8 +52,8 @@ export interface CreateDeploymentBaseResource {
   ProjectId: string;
   SkipActions: string[];
   SpecificMachineIds: string[];
-  QueueTime?: Moment;
-  QueueTimeExpiry?: Moment;
+  QueueTime?: Date;
+  QueueTimeExpiry?: Date;
   TenantId?: string;
   UseGuidedFailure: boolean;
 }

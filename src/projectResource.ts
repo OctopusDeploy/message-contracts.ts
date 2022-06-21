@@ -1,18 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
+import type { DeploymentActionPackageResource } from "./deploymentActionPackageResource";
+import type { MetadataTypeCollection } from "./dynamicFormResources";
+import type { ExtensionSettingsValues } from "./extensionSettingsValues";
+import type { LifecycleResource } from "./lifecycleResource";
+import type { NamedResource } from "./namedResource";
+import type { ProjectGroupResource } from "./projectGroupResource";
+import type { SensitiveValue } from "./propertyValueResource";
+import type { ResourceWithLinks } from "./resource";
 import type {
   NewSpaceScopedResource,
   SpaceScopedResource,
 } from "./spaceScopedResource";
-import type { ActionTemplateParameterResource } from "./actionTemplateParameterResource";
-import type { DeploymentActionPackageResource } from "./deploymentActionPackageResource";
-import type { ExtensionSettingsValues } from "./extensionSettingsValues";
-import type { GitRef } from "./versionControlledResource";
-import type { MetadataTypeCollection } from "./dynamicFormResources";
-import type { NamedResource } from "./namedResource";
-import type { ResourceWithLinks } from "./resource";
-import type { SensitiveValue } from "./propertyValueResource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
+import type { GitRef } from "./versionControlledResource";
 
 interface BaseProjectResourceLinks {
   Self: string;
@@ -103,7 +105,7 @@ export function HasVersionControlledPersistenceSettings(
 
 export interface ProjectResource
   extends NamedResource<ProjectResourceLinks>,
-  SpaceScopedResource {
+    SpaceScopedResource {
   VariableSetId: string;
   DeploymentProcessId: string;
   DiscreteChannelRelease: boolean;
@@ -118,8 +120,8 @@ export interface ProjectResource
   ExtensionSettings: ExtensionSettingsValues[];
   IsVersionControlled: boolean;
   PersistenceSettings:
-  | VersionControlledPersistenceSettings
-  | DatabasePersistenceSettings;
+    | VersionControlledPersistenceSettings
+    | DatabasePersistenceSettings;
   Slug: string;
   ProjectGroupId: string;
   Description: string;
@@ -130,7 +132,7 @@ export type ProjectOrSummaryResource = ProjectResource | ProjectSummaryResource;
 
 export interface ProjectSummaryResource
   extends NamedResource<BaseProjectResourceLinks>,
-  SpaceScopedResource {
+    SpaceScopedResource {
   Slug: string;
   ProjectGroupId: string;
   Description: string;
@@ -139,9 +141,21 @@ export interface ProjectSummaryResource
 
 export interface NewProjectResource extends NewSpaceScopedResource {
   Name: string;
-  Description: string;
+  Description?: string;
   ProjectGroupId: string;
   LifecycleId: string;
+}
+
+export function NewProject(
+  name: string,
+  projectGroup: ProjectGroupResource,
+  lifecycle: LifecycleResource
+): NewProjectResource {
+  return {
+    LifecycleId: lifecycle.Id,
+    Name: name,
+    ProjectGroupId: projectGroup.Id,
+  };
 }
 
 export interface ProjectSettingsMetadata {

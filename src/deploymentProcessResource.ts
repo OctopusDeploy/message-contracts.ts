@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 
-import type { DeploymentProcessResourceLinks } from "./deploymentProcessResourceLinks";
-import type { DeploymentStepResource } from "./deploymentStepResource";
 import type { ICanBeVersionControlled } from "./canBeVersionControlledResource";
 import type { ICommitCommand } from "./commitCommand";
-import type { NewSpaceScopedResource } from "./spaceScopedResource";
+import type { DeploymentProcessResourceLinks } from "./deploymentProcessResourceLinks";
+import type { DeploymentStepResource } from "./deploymentStepResource";
 import { Permission } from "./permission";
 import type { ResourceWithId } from "./resource";
 import type { RunbookProcessResource } from "./runbookProcessResource";
+import type { NewSpaceScopedResource } from "./spaceScopedResource";
 import { typeSafeHasOwnProperty } from "./utils";
 
 export interface IProcessResource

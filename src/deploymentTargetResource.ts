@@ -1,4 +1,7 @@
+import type { NewEndpointResource } from "./endpointResource";
+import type { EnvironmentResource } from "./environmentResource";
 import type { MachineResource, NewMachineResource } from "./machineResource";
+import { MachineModelHealthStatus } from "./machineResource";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 export interface DeploymentTargetResource extends MachineResource {
@@ -15,6 +18,29 @@ export interface NewDeploymentTargetResource extends NewMachineResource {
   TenantedDeploymentParticipation: TenantedDeploymentMode;
   TenantIds: string[]; //ReferenceCollection;
   TenantTags: string[]; //ReferenceCollection;
+}
+
+export function NewDeploymentTarget(
+  name: string,
+  endpoint: NewEndpointResource,
+  environments: EnvironmentResource[],
+  roles: string[],
+  tenantedDeploymentParticipation: TenantedDeploymentMode
+): NewDeploymentTargetResource {
+  return {
+    IsDisabled: false,
+    IsInProcess: false,
+    Endpoint: endpoint,
+    EnvironmentIds: environments.map((e) => e.Id),
+    HasLatestCalamari: false,
+    HealthStatus: MachineModelHealthStatus.Unknown,
+    Name: name,
+    MachinePolicyId: "",
+    Roles: roles,
+    TenantedDeploymentParticipation: tenantedDeploymentParticipation,
+    TenantIds: [],
+    TenantTags: [],
+  };
 }
 
 export function isDeploymentTarget(

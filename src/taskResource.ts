@@ -65,7 +65,7 @@ export interface AccountTestTaskArguments {
 }
 
 //eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TaskTypeResource extends NamedResource { }
+export interface TaskTypeResource extends NamedResource {}
 
 interface CommonTaskResource<TArguments> extends MixedSpaceResource {
   Name: string;
@@ -77,7 +77,7 @@ export type NewTaskResource<TArguments> = CommonTaskResource<TArguments>;
 
 export interface TaskResource<TArguments = {}>
   extends CommonTaskResource<TArguments>,
-  ResourceWithId {
+    ResourceWithId {
   State: TaskState;
   Completed?: string;
   QueueTime?: string;

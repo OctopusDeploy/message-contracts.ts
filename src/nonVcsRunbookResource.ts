@@ -1,9 +1,11 @@
-import type { ConnectivityPolicy } from "./deploymentSettingsResource";
-import type { GuidedFailureMode } from "./deploymentSettingsResource";
+import type {
+  ConnectivityPolicy,
+  GuidedFailureMode,
+} from "./deploymentSettingsResource";
 import type { NamedResource } from "./namedResource";
+import type { RunbookRetentionPeriod } from "./retentionPeriod";
 import type { RunbookEnvironmentScope } from "./runbookEnvironmentScope";
 import type { RunbookResourceLinks } from "./runbookResourceLinks";
-import type { RunbookRetentionPeriod } from "./retentionPeriod";
 import type { TenantedDeploymentMode } from "./tenantedDeploymentMode";
 
 export interface NonVcsRunbookResource

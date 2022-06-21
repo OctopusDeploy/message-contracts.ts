@@ -7,12 +7,15 @@ export interface SensitiveValue {
   NewValue?: string;
 }
 
-export function NewSensitiveValue(value: string, hint?: string): SensitiveValue {
+export function NewSensitiveValue(
+  value: string,
+  hint?: string
+): SensitiveValue {
   return {
     HasValue: true,
     Hint: hint,
-    NewValue: value
-  }
+    NewValue: value,
+  };
 }
 
 export function isSensitiveValue(

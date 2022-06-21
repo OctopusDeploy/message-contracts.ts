@@ -11,16 +11,16 @@ interface TenantResourceShared {
 
 export interface TenantResource
   extends NamedResource,
-  TenantResourceShared,
-  SpaceScopedResource {
+    TenantResourceShared,
+    SpaceScopedResource {
   ClonedFromTenantId: string | null;
   Description: string | null;
 }
 
 export interface NewTenantResource
   extends NewNamedResource,
-  NewSpaceScopedResource,
-  TenantResourceShared {
+    NewSpaceScopedResource,
+    TenantResourceShared {
   Description?: string;
 }
 

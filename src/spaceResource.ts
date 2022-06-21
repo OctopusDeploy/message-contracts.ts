@@ -1,5 +1,6 @@
-import type { NamedResource } from "./namedResource";
-import type { NewNamedResource } from "./namedResource";
+import type { NamedResource, NewNamedResource } from "./namedResource";
+import type { TeamResource } from "./teamResource";
+import type { UserResource } from "./userResource";
 
 interface SpaceResourceLinks {
   Self: string;
@@ -9,18 +10,30 @@ interface SpaceResourceLinks {
   Search: string;
 }
 
-export interface SpaceResource
-  extends NamedResource<SpaceResourceLinks>,
-  CommonSpaceResource { }
-
-export interface NewSpaceResource
-  extends NewNamedResource,
-  CommonSpaceResource { }
-
-interface CommonSpaceResource {
+export interface SpaceResource extends NamedResource<SpaceResourceLinks> {
   Description?: string;
-  SpaceManagersTeams: string[];
   IsDefault: boolean;
-  TaskQueueStopped: boolean;
   SpaceManagersTeamMembers: string[];
+  SpaceManagersTeams: string[];
+  TaskQueueStopped: boolean;
+}
+
+export interface NewSpaceResource extends NewNamedResource {
+  Description?: string;
+  IsDefault?: boolean;
+  SpaceManagersTeams?: string[];
+  TaskQueueStopped?: boolean;
+  SpaceManagersTeamMembers?: string[];
+}
+
+export function NewSpace(
+  name: string,
+  spaceManagersTeams?: TeamResource[],
+  spaceManagersTeamMembers?: UserResource[]
+): NewSpaceResource {
+  return {
+    Name: name,
+    SpaceManagersTeams: spaceManagersTeams?.map((t) => t.Id),
+    SpaceManagersTeamMembers: spaceManagersTeamMembers?.map((u) => u.Id),
+  };
 }

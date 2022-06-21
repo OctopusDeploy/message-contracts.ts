@@ -12,13 +12,13 @@ import type { LinksCollection } from "./linksCollection";
 export interface KubernetesEndpointResource extends AgentlessEndpointResource {
   AccountType: string;
   Authentication:
-  | KubernetesAwsAuthentication
-  | KubernetesAzureAuthentication
-  | KubernetesStandardAccountAuthentication
-  | KubernetesCertificateAuthentication
-  | KubernetesPodServiceAccountAuthentication
-  | KubernetesGoogleCloudAuthentication
-  | null;
+    | KubernetesAwsAuthentication
+    | KubernetesAzureAuthentication
+    | KubernetesStandardAccountAuthentication
+    | KubernetesCertificateAuthentication
+    | KubernetesPodServiceAccountAuthentication
+    | KubernetesGoogleCloudAuthentication
+    | null;
   ClusterCertificate: string;
   ClusterCertificatePath: string;
   ClusterUrl: string;

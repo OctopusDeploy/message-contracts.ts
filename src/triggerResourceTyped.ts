@@ -1,6 +1,6 @@
-import type { NewTriggerResource, TriggerResource } from "./triggerResource";
 import type { TriggerActionResource } from "./triggerActionResource";
 import type { TriggerFilterResource } from "./triggerFilterResource";
+import type { NewTriggerResource, TriggerResource } from "./triggerResource";
 
 export interface TriggerResourceTyped<
   F extends TriggerFilterResource,
