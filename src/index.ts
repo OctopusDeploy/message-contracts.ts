@@ -33,6 +33,7 @@ export * from "./azureEnvironment";
 export * from "./azureServicePrincipalAccountResource";
 export * from "./azureWebSite";
 export * from "./azureWebSiteSlot";
+export * from "./buildInformationResource";
 export * from "./builtInFeedLinks";
 export * from "./builtInFeedResource";
 export * from "./builtInFeedStatsResource";
