@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.1.1...v1.2.0) (2022-06-22)
+
+
+### Features
+
+* added NewDeploymentStepResource ([e03eb54](https://github.com/OctopusDeploy/message-contracts.ts/commit/e03eb54cf09982c0d2eae74febb18032db3cb48c))
+* added NewDeploymentTarget ([10e1b48](https://github.com/OctopusDeploy/message-contracts.ts/commit/10e1b48dc0c23ef6c670d62c412967e51bf4dde0))
+* added NewEndpoint ([a2f7bb5](https://github.com/OctopusDeploy/message-contracts.ts/commit/a2f7bb57bb4c5a05163c102a90fd3f0e8d338548))
+* added NewMachine ([d4fc6c0](https://github.com/OctopusDeploy/message-contracts.ts/commit/d4fc6c013957abc31893d1974f392af0d7403ac0))
+* added NewProject ([b1d57f2](https://github.com/OctopusDeploy/message-contracts.ts/commit/b1d57f2a3bb663091755910d4042b3d90088e981))
+* added NewSpace ([9882c39](https://github.com/OctopusDeploy/message-contracts.ts/commit/9882c398b6495e8f2ef13e03bae7195acb66f1b6))
+* updated NewChannelResource definition ([ccc8586](https://github.com/OctopusDeploy/message-contracts.ts/commit/ccc8586d94a93a4b1efd19cf1642d9b11b39891f))
+
 ### [1.1.1](https://www.github.com/OctopusDeploy/message-contracts.ts/compare/v1.1.0...v1.1.1) (2021-11-24)
 
 
