@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.2.0...v1.3.0) (2022-06-22)
+
+
+### Features
+
+* added build information resources ([bd018de](https://github.com/OctopusDeploy/message-contracts.ts/commit/bd018dea8121611faea83ea3dad79fc49068b533))
+
 ## [1.2.0](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.1.1...v1.2.0) (2022-06-22)
 
 
