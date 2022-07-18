@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.3.0...v1.3.1) (2022-07-18)
+
+
+### Bug Fixes
+
+* exposed missing types ([f5046fc](https://github.com/OctopusDeploy/message-contracts.ts/commit/f5046fcab7a8037530fb4b7c51d96b711afe6328))
+
 ## [1.3.0](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.2.0...v1.3.0) (2022-06-22)
 
 
