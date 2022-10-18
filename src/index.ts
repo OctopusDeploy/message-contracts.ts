@@ -1,3 +1,5 @@
+export * from "./executions";
+export * from "./releases";
 export * from "./aadCredentialType";
 export * from "./accountResource";
 export * from "./accountResourceLinks";
