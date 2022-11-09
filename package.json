@@ -3,12 +3,16 @@
   "bugs": {
     "url": "https://github.com/OctopusDeploy/message-contracts.ts/issues"
   },
+  "dependencies": {
+    "@octopusdeploy/runtime-inputs": "^0.16.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  },
   "description": "Shared TypeScript definitions for Octopus Deploy API operations",
   "devDependencies": {
-    "@octopusdeploy/runtime-inputs": "^0.16.0",
     "@tsconfig/node16": "^1.0.3",
-    "@types/json-patch": "^0.0.30",
     "@types/jest": "^28.1.4",
+    "@types/json-patch": "^0.0.30",
     "@types/lodash": "^4.14.182",
     "jest": "^28.1.2",
     "jest-cli": "^28.1.2",
@@ -17,8 +21,6 @@
     "jest-extended": "^2.0.0",
     "jest-junit": "^14.0.0",
     "jest-runner-eslint": "^1.0.1",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.3",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "typedoc": "^0.23.5",
