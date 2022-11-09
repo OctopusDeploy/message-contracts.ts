@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.3.1...v1.3.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* Corrected some dependencies that were incorrectly dev dependencies ([#47](https://github.com/OctopusDeploy/message-contracts.ts/issues/47)) ([89726d6](https://github.com/OctopusDeploy/message-contracts.ts/commit/89726d62301639369da9e0ddcd3c8b2878c2e0e8))
+
 ## [1.3.1](https://github.com/OctopusDeploy/message-contracts.ts/compare/v1.3.0...v1.3.1) (2022-07-18)
 
 
